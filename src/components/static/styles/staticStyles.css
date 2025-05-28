@@ -1,0 +1,36 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-custom {
+    background: #01722f;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    align-items: center;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.btnCart {
+    background-color: transparent;
+    border: none;
+}
