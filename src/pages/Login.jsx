@@ -1,78 +1,64 @@
 import React, { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 
 
 const Login = () => {
 
     const { setIsAuth } = useContext(CartContext);
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const [errors, setErrors] = useState({});
-    const navigate = useNavigate();
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        let validationErrors = {};
-        if (!email) validationErrors.email = 'Email es requerido';
-        if (!password) validationErrors.password = 'Password es requerido';
-
-        if (Object.keys(validationErrors).length > 0) {
-            setErrors(validationErrors);
-            return;
-        }
-
-        try {
-            const res = await fetch('data/users.json');
-            const users = await res.json();
-
-            const foundUser = users.find(
-                (user) => user.email === email && user.password === password
-            );
-
-            if (!foundUser) {
-                setErrors({ email: 'credenciales invalidas' });
-            } else {
-                //console.log('User role:', foundUser.role);
-
-                if (foundUser.role === 'admin') {
-                    setIsAuth(true);
-
-                    navigate('/admin');
-                } else {
-                    navigate('/');
-                }
-            }
-        } catch (err) {
-            console.error('Error fetching users:', err);
-            setErrors({ email: 'Algo salió mal. Por favor, inténtalo de nuevo más tarde.' });
-        }
-    };
-
+    const { email, setEmail, password, setPassword, handleSubmit, errors } = useAuth();
 
     return (
         <><br />
             <h2 style={{ color: '#333', textAlign: 'center' }}>Inicie Sesión</h2><br />
             <div className='container-fluid justify-content-center'>
-                <h2>Login</h2><br />
-                <form style={{ marginLeft: '60px' }} onSubmit={handleSubmit} >
-                    <input
-                        className='form-control '
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Ingresa tu email"
-                    /> <br />
-
-                    <input
-                        className='form-control '
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Ingresa tu contraseña"
-                    /> <br /><br />
+                <form style={{
+                    marginLeft: '60px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '1rem',
+                    maxWidth: '400px',
+                    margin: 'auto',
+                }} onSubmit={handleSubmit} >
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <label htmlFor="formBasicEmail" style={{ marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                            Correo electrónico</label>
+                        <input
+                            className='form-control '
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Ingresa tu correo electrónico"
+                            style={{
+                                padding: '0.5rem',
+                                border: `1px solid ${errors.email ? 'red' : '#ced4da'}`,
+                                borderRadius: '0.25rem',
+                            }}
+                        />
+                        {errors.email && (
+                            <div style={{ color: 'red', fontSize: '0.875rem', marginTop: '0.25rem' }} >{errors.email}</div>
+                        )}
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <label htmlFor="formBasicPassword" style={{ marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                            Contraseña</label>
+                        <input
+                            className='form-control '
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Ingresa tu contraseña"
+                            style={{
+                                padding: '0.5rem',
+                                border: `1px solid ${errors.password ? 'red' : '#ced4da'}`,
+                                borderRadius: '0.25rem',
+                            }}
+                        />
+                        {errors.password && (
+                            <div style={{ color: 'red', fontSize: '0.875rem', marginTop: '0.25rem' }} >{errors.password}</div>
+                        )}
+                    </div>
                     <button type="submit">Enviar</button>
                 </form>
             </div>
@@ -80,4 +66,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login;

@@ -4,6 +4,7 @@
         "price": "457.79",
         "stock": 37,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/exterior-7-mesa-de-trabajo-17-copia-51-4530c5a7d9571b100b16834758481695-640-0.webp",
+        "quantity": 0,
         "id": "1"
     },
     {
@@ -11,6 +12,7 @@
         "price": "563.15",
         "stock": 36,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/lavanda1-8b4f35a6585b561e4615880446284566-640-0.webp",
+        "quantity": 0,
         "id": "2"
     },
     {
@@ -18,6 +20,7 @@
         "price": "986.39",
         "stock": 69,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/flor-de-azucar1-9c1eb955ee2e3662dc16342477834149-640-0.webp",
+        "quantity": 0,
         "id": "3"
     },
     {
@@ -25,6 +28,7 @@
         "price": "360.75",
         "stock": 65,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/primula-obconica-21-870d41ef5a561e232e16588663056850-640-0.webp",
+        "quantity": 0,
         "id": "4"
     },
     {
@@ -32,6 +36,7 @@
         "price": "853.69",
         "stock": 97,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20210904_152630414_hdr1-5ab184104db65c067016307801082532-640-0.webp",
+        "quantity": 0,
         "id": "5"
     },
     {
@@ -39,6 +44,7 @@
         "price": "435.95",
         "stock": 93,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img-20200529-wa0036-011-35358c443b592b460515907718820113-640-0.webp",
+        "quantity": 0,
         "id": "6"
     },
     {
@@ -46,6 +52,7 @@
         "price": "204.99",
         "stock": 81,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/pothus-hoja-grande-c1389dfdb21a0e3aec17131996017047-640-0.webp",
+        "quantity": 0,
         "id": "7"
     },
     {
@@ -53,6 +60,7 @@
         "price": "508.85",
         "stock": 1,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/geranio-f59012ca427f09570417062055559903-640-0.webp",
+        "quantity": 0,
         "id": "8"
     },
     {
@@ -60,6 +68,7 @@
         "price": "66.19",
         "stock": 65,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/lazo-amor-m121-3d59abf41f6f422e2d16138474433247-640-0.webp",
+        "quantity": 0,
         "id": "9"
     },
     {
@@ -67,6 +76,7 @@
         "price": "289.25",
         "stock": 61,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/aliso1-6d2624407fb012fbbd16342477267561-640-0.webp",
+        "quantity": 0,
         "id": "10"
     },
     {
@@ -74,6 +84,7 @@
         "price": "98.25",
         "stock": 54,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20210916_140540210_hdr11-206eca24d5c515223716318124548045-640-0.webp",
+        "quantity": 0,
         "id": "11"
     },
     {
@@ -81,6 +92,7 @@
         "price": "123.25",
         "stock": 35,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/jazmin-chino-11-a14419da379adac87b16342284680058-640-0.webp",
+        "quantity": 0,
         "id": "12"
     },
     {
@@ -88,6 +100,7 @@
         "price": "456.25",
         "stock": 75,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/exterior-8-mesa-de-trabajo-16-copia-51-4362225ba807f4ca5516834791956338-240-0.webp",
+        "quantity": 0,
         "id": "13"
     },
     {
@@ -95,6 +108,7 @@
         "price": "299.15",
         "stock": 10,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/tomate-cherry-m131-ff770dc01c2b232edc16078024061266-640-0.webp",
+        "quantity": 0,
         "id": "14"
     },
     {
@@ -102,6 +116,7 @@
         "price": "456.99",
         "stock": 61,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/pino-lemon-3-l1-7904c57b3179e55a5116063104229934-640-0.webp",
+        "quantity": 0,
         "id": "15"
     },
     {
@@ -109,6 +124,7 @@
         "price": "345.99",
         "stock": 100,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/conejito-11-c3bc77d9c8ce33449e16570541398008-640-0.webp",
+        "quantity": 0,
         "id": "16"
     },
     {
@@ -116,6 +132,7 @@
         "price": "236.25",
         "stock": 34,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20200523_145409700_portrait-011-2248d089ef35e79b5d15902571311726-640-0.webp",
+        "quantity": 0,
         "id": "17"
     },
     {
@@ -123,6 +140,7 @@
         "price": "678.25",
         "stock": 47,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20200523_145409700_portrait-011-2248d089ef35e79b5d15902571311726-640-0.webp",
+        "quantity": 0,
         "id": "18"
     },
     {
@@ -130,6 +148,7 @@
         "price": "321.65",
         "stock": 62,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/verbena-m151-4e23c9201b20f1cf2716111610278523-640-0.webp",
+        "quantity": 0,
         "id": "19"
     },
     {
@@ -137,6 +156,7 @@
         "price": "336.25",
         "stock": 54,
         "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/azalea-simple-31-11a9a590553bb7236416342475910133-640-0.webp",
+        "quantity": 0,
         "id": "20"
     }
 ]

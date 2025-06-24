@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import ProductForm from '../components/ProductForm';
 
 const Admin = () => {
 
     const [products, setProducts] = useState([]);
     const [form, setForm] = useState({ id: null, name: "", price: "" });
     const [load, setLoad] = useState(true);
+    const [open, setOpen] = useState(false);
 
   useEffect(() => {
-        fetch("/data/data.json")
+        fetch("https://6833e4df464b4996360096f0.mockapi.io/products-ecommerce/products")
             .then((response) => response.json())
             .then((data) => {
                 setTimeout(() => {
@@ -22,6 +24,24 @@ const Admin = () => {
             });
     }, []);
 
+    const addProduct = async (product) =>{
+        try{
+            const response = await fetch("https://6833e4df464b4996360096f0.mockapi.io/products-ecommerce/products",{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(product)
+            })
+            if(!response.ok){
+                throw new Error('Error al agregar producto');
+            }
+            const data = await response.json()
+            alert('Producto agregado correctamente')
+        } catch(error){
+            console.log(error.message);
+        }
+    }
     return (
         <>
             {load ? (
@@ -29,25 +49,6 @@ const Admin = () => {
             ) : (
                 <><br />
                     <h2 className="title">Panel Administrativo</h2>
-                    <form className="form">
-                        <input
-                            className='form-control input'
-                            type="text"
-                            name="name"
-                            placeholder="Nombre del producto"           
-                            required
-                        />
-                        <input
-                            className='form-control input'
-                            type="number"
-                            name="price"
-                            placeholder="Precio del producto"
-                            required
-                        />
-                        <button type="submit" className="btn btn-success">
-                            {form.id ? "Editar" : "Crear"}
-                        </button>
-                    </form>
                     <ul className="list">
                         {products.map((product) => (
                             <li key={product.id} className="listItem">
@@ -68,6 +69,8 @@ const Admin = () => {
                     </ul>
                 </>
             )}
+            <button onClick={() => setOpen(true)}>Agregar Producto</button>
+            {open && (<ProductForm onAdd={addProduct}/>)}
         </>
     );
 };

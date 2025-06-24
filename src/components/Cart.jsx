@@ -13,8 +13,8 @@ const Cart = ({ onClose }) => {
                 <button onClick={onClose} className='close-button'>✕</button>
             </div>
             <div className='cart-content'>
-                {cartItems.length === 0 ? 
-                (<p style={{ color: 'black' }}>El carrito esta vacio </p>) :
+                {cartItems.length === 0 ?
+                    (<p style={{ color: 'black' }}>El carrito esta vacio </p>) :
                     (<>
                         <ul className='cart-items'>
                             {cartItems.map((item, index) => (
@@ -25,6 +25,11 @@ const Cart = ({ onClose }) => {
                             ))}
                         </ul>
                         <button className='btn btn-outline-danger' onClick={() => emptyCart()}>Vaciar Carrito</button>
+                        <div className='cart-footer'>
+                            <p style={{ color: 'blue' }}>
+                                Total: ${cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)}</p>
+                            <button className='btn btn-outline-success'>Finalizar Compra</button>
+                        </div>
                     </>
                     )}
             </div>

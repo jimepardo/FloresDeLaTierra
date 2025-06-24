@@ -5,6 +5,11 @@ Proveer productos de alta calidad mientras fomentamos la confianza y la lealtad 
 Proyecto del Curso React 25022
 
 
+## Ejecución
+1) Posicionarse en el directorio con cd nombre-proyecto
+2) Iniciar servidor con ´npm run dev´
+3) Acceder desde el navegador a la siguiente dirección: http://localhost:5173/
+
 ## Autor
 
 Pardo, Jimena

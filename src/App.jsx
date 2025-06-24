@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import Header from './components/static/Header';
 import Nav from './components/static/Nav';
@@ -19,39 +19,35 @@ import { CartContext } from './context/CartContext';
 
 function App() {
 
-  const { isAuthenticated } = useContext(CartContext)
+  const { isAuthenticated } = useContext(CartContext);
 
   return (
     <>
-      
-      
-      <Router>
-        <Header />
+
+      <Header />
       <Nav />
-        <Routes>
-          <Route path='/' element={<Home />} />
+      <Routes>
+        <Route path='/' element={<Home />} />
 
-          <Route path='/login' element={<Login />} />
+        <Route path='/login' element={<Login />} />
 
-          <Route path='/admin' element={<ProtectedRoutes isAuthenticated={isAuthenticated}> <Admin /> </ProtectedRoutes>} />
+        <Route path='/admin' element={<ProtectedRoutes isAuthenticated={isAuthenticated}> <Admin /> </ProtectedRoutes>} />
 
-          <Route path='/products' element={<Gallery />} />
+        <Route path='/products' element={<Gallery />} />
 
-          <Route path='/products/:id' element={<ProductDetail />} />
+        <Route path='/products/:id' element={<ProductDetail />} />
 
-          <Route path='/about' element={<About />} />
+        <Route path='/about' element={<About />} />
 
-          <Route path='/howto' element={<HowTo />} />
+        <Route path='/howto' element={<HowTo />} />
 
-          <Route path='/contact' element={<Contact />} />
+        <Route path='/contact' element={<Contact />} />
 
-          <Route path='*' element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
 
-        </Routes>
-         <Footer />
-      </Router>
-      
-     
+      </Routes>
+      <Footer />
+
     </>
   )
 }
