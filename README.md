@@ -4,6 +4,13 @@ Proveer productos de alta calidad mientras fomentamos la confianza y la lealtad 
 
 Proyecto del Curso React 25022
 
+## Instalar dependencias
+    - npm i latest-version
+    - npm i react-router-dom
+    - npm i bootstrap @popperjs/core
+    - npm i react-icons
+    - npm i react-toastify
+    - npm i sweetalert2
 
 ## Ejecución
 1) Posicionarse en el directorio con cd nombre-proyecto

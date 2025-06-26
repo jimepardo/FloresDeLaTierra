@@ -1,39 +1,87 @@
 import React, { useState } from 'react';
 
-
 function Form() {
 
-    const [product, setProduct] = useState({
-        name:'',
-        price:'',
-        description:'',
+    const [request, setRequest] = useState({
+        name: '',
+        email: '',
+        description: '',
     });
-    
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setProducto({ ...producto, [name]: value });
+        setRequest({ ...request, [name]: value });
     };
 
     function handleSubmit(event) {
         event.preventDefault();
-        alert(`Formulario enviado por: ${nombre}`);
+        alert(`Formulario enviado por: ${request.email}`);
 
     }
 
-
     return (
-        <form style={{ marginLeft: '60px' }} onSubmit={handleSubmit}>
-            <h2>Agregar Producto</h2>
-            <label>Nombre: </label>
-            <input
-                type="text"
-                value={product.name}
-                onChange={handleChange}
-                placeholder="Ingresa nombre del producto"
-            />
-
-            <button type="submit">Enviar</button>
+        <form style={{
+            marginLeft: '60px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+            maxWidth: '400px',
+            margin: 'auto',
+        }} onSubmit={handleSubmit} >
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <label style={{ color: '#344E41', marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                    Nombre: </label>
+                <input
+                    className='form-control '
+                    type="text"
+                    name="name"
+                    value={request.name}
+                    onChange={handleChange}
+                    placeholder="Ingresa tu nombre"
+                    style={{
+                        padding: '0.5rem',
+                        border: '1px solid #ced4da',
+                        borderRadius: '0.25rem',
+                    }}
+                />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <label style={{ color: '#344E41', marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                    Correo electrónico</label>
+                <input
+                    className='form-control '
+                    type="email"
+                    name="email"
+                    value={request.email}
+                    onChange={handleChange}
+                    placeholder="Ingresa tu correo electrónico"
+                    style={{
+                        padding: '0.5rem',
+                        border: '1px solid #ced4da',
+                        borderRadius: '0.25rem',
+                    }}
+                />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <label style={{ color: '#344E41', marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                    Consulta</label>
+                <textarea
+                    className='form-control '
+                    type="text"
+                    name="description"
+                    value={request.description}
+                    onChange={handleChange}
+                    placeholder="Ingresa tu consulta"
+                    style={{
+                        padding: '0.5rem',
+                        border: '1px solid #ced4da',
+                        borderRadius: '0.25rem',
+                    }}
+                />
+            </div>
+            <button className='btnSession btn' style={{ color: '#fff' }} type="submit">Enviar</button>
         </form>
+
     );
 }
 

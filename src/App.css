@@ -36,7 +36,7 @@
     flex-wrap: wrap;
 }
 
-.list img {
+.list img  {
     width: 50px;
     height: 50px;
     margin-right: 10px;
@@ -50,6 +50,7 @@
     padding: 10px;
     border-bottom: 1px solid #ccc;
 }
+
 .listItem span {
     
     font-size: 18px;
@@ -73,10 +74,21 @@
     cursor: pointer;
 }
 
-.loading{
-    min-height: 50vh;
+.loading {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15% 35%;
-  }
+    justify-content: center; 
+    align-items: center;    
+    min-height: 50vh;       
+    width: 100%;            
+}
+
+.loading img {
+    display: block;
+    max-width: 20%;
+    height: auto;
+}
+
+.link.active {
+    color: #DAD7CD;
+    font-weight: bold;
+}

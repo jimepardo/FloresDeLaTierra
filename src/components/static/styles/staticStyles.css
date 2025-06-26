@@ -1,20 +1,20 @@
-a {
-    color: white;
-    text-decoration: none;
-}
-
 .footer-custom {
-    background: #01722f;
-    color: white;
-    width: 100%;
-    bottom: 0;
-    position: fixed;
+    background: #588157;
+    color: #DAD7CD;
 }
 
 nav {
-    background-color: #333;
-    color: white;
+    background-color: #344E41;
+    color: #344E41;
     padding: 10px;
+}
+
+.navbar.fixed-top {
+    height: 60px;
+}
+
+.fixed-bottom {
+    height: 30px;
 }
 
 ul {
@@ -26,11 +26,32 @@ ul {
 }
 
 .link {
-    color: white;
+    color: #344E41;
     text-decoration: none;
+}
+
+.navbar-nav .nav-link.active {
+    color: #344E41;
 }
 
 .btnCart {
     background-color: transparent;
     border: none;
+    color: #344E41;
+}
+
+.logo:hover{
+    color: #344E41;
+    transform: scale(1.05);
+}
+
+.btnSession{
+    background-color: #588157;
+    border-color: #588157;
+    color: #DAD7CD;
+}
+
+.btnSession:hover{
+    background-color: #3A5A40;
+    border-color: #3A5A40;
 }

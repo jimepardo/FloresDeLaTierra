@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ProductForm({ onAdd }) {
+function ProductAddForm({ onAdd }) {
     const [product, setProduct] = useState({
         name: '',
         price: '',
@@ -78,4 +78,4 @@ function ProductForm({ onAdd }) {
     );
 }
 
-export default ProductForm;
+export default ProductAddForm;

@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import Header from './components/static/Header';
-import Nav from './components/static/Nav';
 import Footer from './components/static/Footer';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
@@ -15,23 +14,28 @@ import Login from './pages/Login';
 import Admin from './pages/Admin';
 import ProtectedRoutes from './auth/ProtectedRoutes';
 import { CartContext } from './context/CartContext';
+import { useAuth } from './context/AuthContext';
 
 
 function App() {
 
   const { isAuthenticated } = useContext(CartContext);
+  const { role } = useAuth;
 
   return (
     <>
 
       <Header />
-      <Nav />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<ProtectedRoutes isAuthenticated={isAuthenticated} requiredRole='client' role={role} >
+          <Home/>
+        </ProtectedRoutes>} />
 
         <Route path='/login' element={<Login />} />
 
-        <Route path='/admin' element={<ProtectedRoutes isAuthenticated={isAuthenticated}> <Admin /> </ProtectedRoutes>} />
+        <Route path='/admin' element={<ProtectedRoutes isAuthenticated={isAuthenticated} requiredRole='admin'> 
+          <Admin /> 
+        </ProtectedRoutes>} />
 
         <Route path='/products' element={<Gallery />} />
 

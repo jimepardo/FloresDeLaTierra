@@ -1,54 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import ProductForm from '../components/ProductForm';
+import React, { useContext } from 'react';
+import ProductAddForm from '../components/ProductAddForm';
+import ProductEditForm from '../components/ProductEditForm';
+import { useNavigate } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
+import AdminContext from '../context/AdminContext';
 
 const Admin = () => {
+    const { setIsAuth } = useContext(CartContext);
 
-    const [products, setProducts] = useState([]);
-    const [form, setForm] = useState({ id: null, name: "", price: "" });
-    const [load, setLoad] = useState(true);
-    const [open, setOpen] = useState(false);
+    const navigate = useNavigate();
 
-  useEffect(() => {
-        fetch("https://6833e4df464b4996360096f0.mockapi.io/products-ecommerce/products")
-            .then((response) => response.json())
-            .then((data) => {
-                setTimeout(() => {
-                    setProducts(data);
-                    setLoad(false);
-                }, 2000);
-            })
-            .catch((error) => {
-                console.error("Error fetching data:", error);
-                setError(true);
-                setLoad(false);
-            });
-    }, []);
+    const { products, load, open, setOpen, selected, setSelected, openEditor, setOpenEditor,
+        addProduct, editProduct, deleteProduct
+    } = useContext(AdminContext)
 
-    const addProduct = async (product) =>{
-        try{
-            const response = await fetch("https://6833e4df464b4996360096f0.mockapi.io/products-ecommerce/products",{
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(product)
-            })
-            if(!response.ok){
-                throw new Error('Error al agregar producto');
-            }
-            const data = await response.json()
-            alert('Producto agregado correctamente')
-        } catch(error){
-            console.log(error.message);
-        }
-    }
     return (
-        <>
+        <div id='main-content-wrapper'>
             {load ? (
                 <p>Cargando...</p>
             ) : (
                 <><br />
-                    <h2 className="title">Panel Administrativo</h2>
+                    <nav>
+                        <ul className="nav">
+                            <li className="navItem">
+                                <button className="navButton" onClick={() => {
+                                    setIsAuth(false);
+                                    navigate('/');
+                                    localStorage.removeItem('isAuth');
+                                }}>
+                                    <i className="fa-solid fa-right-from-bracket"></i>
+                                </button>
+                            </li>
+                            <li className="navItem">
+                                <a href="/admin">Admin</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <h2 className="title" style={{ color: '#344E41' }} >Panel Administrativo</h2>
                     <ul className="list">
                         {products.map((product) => (
                             <li key={product.id} className="listItem">
@@ -60,9 +48,12 @@ const Admin = () => {
                                 <span>{product.name}</span>
                                 <span>${product.price}</span>
                                 <div>
-                                    <button className="btn btn-secondary">Editar</button>
+                                    <button className="btn btn-secondary" onClick={() => {
+                                        setOpenEditor(true)
+                                        setSelected(product)
+                                    }}>Editar</button>
 
-                                    <button className="btn btn-danger m-2">Eliminar</button>
+                                    <button className="btn btn-danger m-2" onClick={() => deleteProduct(product.id)} >Eliminar</button>
                                 </div>
                             </li>
                         ))}
@@ -70,8 +61,9 @@ const Admin = () => {
                 </>
             )}
             <button onClick={() => setOpen(true)}>Agregar Producto</button>
-            {open && (<ProductForm onAdd={addProduct}/>)}
-        </>
+            {open && (<ProductAddForm onAdd={addProduct} />)}
+            {openEditor && (<ProductEditForm selectedProduct={selected} onEdit={editProduct} />)}
+        </div>
     );
 };
 

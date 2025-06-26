@@ -5,7 +5,7 @@
         "role": "admin"
     },
     {
-        "email": "user@gmail.com",
+        "email": "client@gmail.com",
         "password": "1234",
         "role": "client"
     }

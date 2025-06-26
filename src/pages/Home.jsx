@@ -12,9 +12,9 @@ const Home = () => {
     }
 
     return (
-        <>
+        <div id='main-content-wrapper'>
             <div style={{ padding: '20px', maxWidth: '80%', margin: '0 auto' }}><br/>
-                <h1 style={{ color: '#333', textAlign: 'center' }}>Bienvenidos a Flores de la Tierra</h1><br/>
+                <h1 style={{ color: '#344E41', textAlign: 'center' }}>Bienvenidos a Flores de la Tierra</h1><br/>
                 <div className='container-fluid'>
                     {
                         load ? <img className='loading' src={loading} alt="loading" /> : 
@@ -23,7 +23,7 @@ const Home = () => {
 
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -1,5 +1,5 @@
 .card{
-    background-color: #fff;
+    background-color: #A3B18A;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     padding: 16px;
@@ -39,7 +39,7 @@
 .product-price{
     font-size: 16px;
     font-weight: 700;
-    color: #2563eb;
+    color: #007b55;
     margin-bottom: 4px;
 }
 .product-stock{
@@ -53,10 +53,11 @@
     align-items: center;
     gap: 8px;
     margin-bottom: 12px;
+    color:#344E41
 }
 
 .qtyButton{
-    background-color: #e0e0e0;
+    background-color: #DAD7CD;
     border: none;
     padding: 6px 12px;
     border-radius: 4px;
@@ -64,4 +65,29 @@
     font-size: 15px;
     font-weight: 600;
     transition: background-color 0.2s;
+}
+
+.qtyButton:hover{
+    color:#DAD7CD;
+    background-color: #588157;
+}
+
+.btn-add{
+    color:#344E41;
+    background-color: #DAD7CD;
+}
+
+.btn-add:hover{
+    color:#DAD7CD;
+    background-color: #588157;
+}
+
+.btn-seem{
+    color:#DAD7CD;
+    background-color: #344E41;
+}
+
+.btn-seem:hover{
+    color:#DAD7CD;
+    background-color: #588157;
 }

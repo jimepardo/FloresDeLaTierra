@@ -20,15 +20,15 @@ const Cart = ({ onClose }) => {
                             {cartItems.map((item, index) => (
                                 <li key={item.id} className='text-dark cart-item'>
                                     <span>  {item.name} - ${item.price} - Cantidad: {item.quantity} </span>
-                                    <button className='' onClick={() => deleteProduct(item)}><i className="fa-solid fa-trash" style={{ color: "black" }}></i></button>
+                                    <button className='' onClick={() => deleteProduct(item)}><i className="fa-solid fa-trash" style={{ color: "#344E41" }}></i></button>
                                 </li>
                             ))}
                         </ul>
-                        <button className='btn btn-outline-danger' onClick={() => emptyCart()}>Vaciar Carrito</button>
+                        <button className='btn btn-emp' onClick={() => emptyCart()}>Vaciar Carrito</button>
                         <div className='cart-footer'>
-                            <p style={{ color: 'blue' }}>
+                            <p style={{ color: '#344E41' }}>
                                 Total: ${cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)}</p>
-                            <button className='btn btn-outline-success'>Finalizar Compra</button>
+                            <button className='btn btn-fin'>Finalizar Compra</button>
                         </div>
                     </>
                     )}

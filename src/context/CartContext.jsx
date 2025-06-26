@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 export const CartContext = createContext();
 
@@ -9,6 +10,7 @@ export const CartProvider = ({ children }) => {
     const [load, setLoad] = useState(true)
     const [error, setError] = useState(false)
     const [isAuthenticated, setIsAuth] = useState(false)
+    const [search, setSearch] = useState("")
 
     const [isCartOpen, setCartOpen] = useState(false);
 
@@ -28,19 +30,23 @@ export const CartProvider = ({ children }) => {
             });
     }, []);
 
+    const productsFiltered = products.filter((product) => product?.name.toLowerCase().includes(search.toLowerCase()))
+
     const addToCart = (product) => {
         const productExists = cartItems.find(item => item.id === product.id)
 
         if (productExists) {
-            setCartItems(cartItems.map((item) => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item))
+            setCartItems(cartItems.map((item) => item.id === product.id ? { ...item, quantity: product.quantity } : item))
         } else {
-            setCartItems([...cartItems, product ])
+            toast.success(`El producto ${product.name} se ha agregado al carrito`)
+            setCartItems([...cartItems, {...product, quantity: product.quantity} ])
         }
     }
 
     const deleteProduct = (product) => {
-        setCartItems(preVCart => {
-            return preVCart.map(item => {
+        toast.error(`El producto ${product.name} se ha eliminado al carrito`)
+        setCartItems(prevCart => {
+            return prevCart.map(item => {
                 if (item.id === product.id) {
                     if (item.quantity > 1) {
                         return { ...item, quantity: item.quantity - 1 }
@@ -62,7 +68,8 @@ export const CartProvider = ({ children }) => {
     return (
         <CartContext.Provider value={
             {
-                cartItems, products, load, error, addToCart, deleteProduct, emptyCart, isAuthenticated, isCartOpen, setCartOpen, setIsAuth
+                cartItems, products, load, error, addToCart, deleteProduct, emptyCart, isAuthenticated, isCartOpen, setCartOpen, setIsAuth,
+                search, setSearch
             }
         } >
             {children}
