@@ -10,6 +10,7 @@ export const AdminProvider = ({ children }) => {
 
     const [selected, setSelected] = useState(null);
     const [openEditor, setOpenEditor] = useState(false);
+    const [error, setError] = useState(false);
 
     const apiUrl = 'https://6833e4df464b4996360096f0.mockapi.io/products-ecommerce/products'
 
@@ -30,12 +31,24 @@ export const AdminProvider = ({ children }) => {
     }, []);
 
     const loadProducts = async () => {
+        setLoad(true);
+        setError(false);
         try {
             const res = await fetch(apiUrl)
             const data = await res.json()
             setProducts(data)
         } catch (error) {
             console.log('Error al cargar los productos', error);
+            setError(true);
+            Swal.fire({
+                title: "Error",
+                text: "No se pudieron cargar los productos. Inténtalo de nuevo.",
+                icon: "error"
+            });
+        } finally {
+            setTimeout(() => { 
+                setLoad(false);
+            }, 500); 
         }
     }
 
@@ -61,6 +74,11 @@ export const AdminProvider = ({ children }) => {
             setOpen(false)
         } catch (error) {
             console.log(error.message);
+            Swal.fire({
+                title: "Error",
+                text: "Hubo un problema al agregar el producto.",
+                icon: "error"
+            });
         }
     }
 
@@ -85,25 +103,43 @@ export const AdminProvider = ({ children }) => {
             loadProducts()
         } catch (error) {
             console.log(error.message)
+            Swal.fire({
+                title: "Error",
+                text: "Hubo un problema al actualizar el producto.",
+                icon: "error"
+            });
         }
     }
 
     const deleteProduct = async (id) => {
-        const confirm = window.confirm('¿Estás seguro que deseas eliminar el producto?')
-        if (confirm) {
+        const result = await Swal.fire({
+            title: "¿Estás seguro?",
+            text: "¡No podrás revertir esto!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sí, eliminarlo!",
+            cancelButtonText: "Cancelar"
+        });
+        if (result.isConfirmed) {
             try {
                 const response = await fetch(apiUrl`/${id}`, {
                     method: 'DELETE'
                 })
                 if (!response.ok) throw Error('Error al eliminar')
                 Swal.fire({
-                    title: ":(!",
+                    title: "Eliminado!",
                     text: "Producto eliminado correctamente",
                     icon: "error"
                 });
                 loadProducts()
             } catch (error) {
-                alert('Hubo un problema al eliminar el producto')
+                Swal.fire({
+                    title: "Error",
+                    text: "Hubo un problema al eliminar el producto.",
+                    icon: "error"
+                });
             }
         }
     }

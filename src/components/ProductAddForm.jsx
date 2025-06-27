@@ -44,36 +44,35 @@ function ProductAddForm({ onAdd }) {
 
     return(
         <form onSubmit={handleSubmit}>
-            <h2>Agregar Producto</h2>
             <div>
                 <label>Nombre:</label>
-                <input
+                <input className='form-control'
                     type="text" name="name" value={product.name} onChange={handleChange} required />
                      {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
             </div>
             <div>
                 <label>Precio:</label>
-                <input type="number" name="price" value={product.price} onChange={handleChange} required
+                <input className='form-control' type="number" name="price" value={product.price} onChange={handleChange} required
                     min="0" />
                     {errors.price && <p style={{ color: 'red' }}>{errors.price}</p>}
             </div>
             <div>
                 <label>Stock:</label>
-                <input type="number" name="stock" value={product.stock} onChange={handleChange} required
+                <input className='form-control' type="number" name="stock" value={product.stock} onChange={handleChange} required
                     min="0" />
                     {errors.stock && <p style={{ color: 'red' }}>{errors.stock}</p>}
             </div>
             <div>
                 <label>Imagen:</label>
-                <textarea
+                <textarea className='form-control'
                     name="img"
                     value={product.img}
                     onChange={handleChange}
                     required
                 />
                 {errors.img && <p style={{ color: 'red' }}>{errors.img}</p>}
-            </div>
-            <button type="submit">Agregar Producto</button>
+            </div><br/>
+            <button className='btn btnSession' type="submit">Agregar Producto</button>
         </form>
     );
 }

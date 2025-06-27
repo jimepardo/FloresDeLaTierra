@@ -13,21 +13,26 @@ export const AuthProvider = ({ children }) => {
 
     const { setIsAuth } = useContext(CartContext);
     const [role, setRole] = useState('');
+    const [userInfo, setUserInfo] = useState(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    useEffect(()=> {
+    useEffect(() => {
         const isAuthenticated = localStorage.getItem('isAuth') === 'true';
         const userRole = localStorage.getItem('role') || '';
+        const userName = localStorage.getItem('userName');
 
-        if(isAuthenticated && userRole === 'admin'){
-            setIsAuth(true)
-            setRole(userRole)
-            navigate('/admin')
-        }else if(isAuthenticated && userRole === 'client'){
-            setIsAuth(true)
-            setRole(userRole)
-            navigate('/')
+        if (isAuthenticated) {
+            setIsAuth(true);
+            setIsLoggedIn(true);
+            setUserInfo({ name: userName, role: userRole });
+
         }
-    }, [])
+        if (userRole === 'admin') {
+            navigate('/admin');
+        } else if (userRole === 'client') {
+            navigate('/');
+        }
+    }, [setIsAuth, navigate])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -45,21 +50,22 @@ export const AuthProvider = ({ children }) => {
             const users = await res.json();
 
             const foundUser = users.find(
-                (user) => user.email === email && user.password === password
+                (user) => user.email === email.toLowerCase() && user.password === password
             );
 
             if (!foundUser) {
                 setErrors({ email: 'Las credenciales son inválidas' });
             } else {
+                setIsAuth(true);
+                setIsLoggedIn(true);
+                setUserInfo({ name: foundUser.name, role: foundUser.role });
+
+                localStorage.setItem('isAuth', true);
+                localStorage.setItem('role', foundUser.role);
+                localStorage.setItem('userName', foundUser.name);
                 if (foundUser.role === 'admin') {
-                    setIsAuth(true);
-                    localStorage.setItem('isAuth', true);
-                    localStorage.setItem('role', foundUser.role);
                     navigate('/admin');
                 } else {
-                    setIsAuth(true);
-                    localStorage.setItem('isAuth', true);
-                    localStorage.setItem('role', foundUser.role);
                     navigate('/');
                 }
             }
@@ -69,8 +75,18 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    return(
-        <AuthContext.Provider value ={{email, setEmail, password, setPassword, handleSubmit, errors }}>
+    const logout = () => {
+        setIsAuth(false);
+        setIsLoggedIn(false);
+        setUserInfo(null);
+        localStorage.removeItem('isAuth');
+        localStorage.removeItem('role');
+        localStorage.removeItem('userName');
+        navigate('/');
+    }
+
+    return (
+        <AuthContext.Provider value={{ email, setEmail, password, setPassword, handleSubmit, errors, isLoggedIn, userInfo, logout }}>
             {children}
         </AuthContext.Provider>
     );

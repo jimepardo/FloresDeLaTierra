@@ -17,10 +17,9 @@ function ProductEditForm({ selectedProduct, onEdit }) {
             e.preventDefault()
             onEdit(product)
         }}>
-            <h2>Editar Producto</h2>
             <div>
                 <label>ID:</label>
-                <input
+                <input className='form-control'
                     type="number"
                     name="id"
                     value={product.id || ''}
@@ -30,7 +29,7 @@ function ProductEditForm({ selectedProduct, onEdit }) {
             </div>
             <div>
                 <label>Nombre:</label>
-                <input
+                <input className='form-control'
                     type="text"
                     name="name"
                     value={product.name || ''}
@@ -40,7 +39,7 @@ function ProductEditForm({ selectedProduct, onEdit }) {
             </div>
             <div>
                 <label>Precio:</label>
-                <input
+                <input className='form-control'
                     type="number"
                     name="price"
                     value={product.price || ''}
@@ -51,7 +50,7 @@ function ProductEditForm({ selectedProduct, onEdit }) {
             </div>
             <div>
                 <label>Stock:</label>
-                <input
+                <input className='form-control'
                     type="number"
                     name="stock"
                     value={product.stock || ''}
@@ -61,15 +60,15 @@ function ProductEditForm({ selectedProduct, onEdit }) {
             </div>
             <div>
                 <label>Imagen URL:</label>
-                <input
+                <textarea className='form-control'
                     type="text"
                     name="img"
                     value={product.img || ''}
                     onChange={handleChange}
                     required
                 />
-            </div>
-            <button type="submit">Actualizar Producto</button>
+            </div><br/>
+            <button className='btn btnSession' type="submit">Actualizar Producto</button>
         </form>
     );
 }

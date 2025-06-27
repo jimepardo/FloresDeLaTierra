@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import './styles/Product.css';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
+import { HiPlusSm, HiMinusSm } from "react-icons/hi";
 
 const Product = ({ product }) => {
 
@@ -37,9 +38,9 @@ const Product = ({ product }) => {
                 <p className='product-price'>${getPrice(product.price)}</p>
                 <p className='product-stock'>Stock: {product.stock} </p>
                 <div className='quantity-container'>
-                    <button onClick={decrease} className='qtyButton'>-</button>
+                    <button onClick={decrease} className='qtyButton'><HiMinusSm /></button>
                     <span>{quantity}</span>
-                    <button onClick={increase} className='qtyButton'>+</button>
+                    <button onClick={increase} className='qtyButton'><HiPlusSm /></button>
                 </div>
                 <div className='d-inline-flex gap-1'>
                     <button className='btn btn-add' style={{ display: quantity == 0 ? 'none' : 'block' }} onClick={() => addToCart({ ...product, quantity: quantity })} >Agregar</button>
