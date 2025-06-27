@@ -23,7 +23,7 @@ const Login = () => {
                         margin: 'auto',
                     }} onSubmit={handleSubmit} >
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            <label htmlFor="formBasicEmail" style={{ marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                            <label htmlFor="formBasicEmail" style={{ color:'#344E41', marginBottom: '0.5rem', fontWeight: 'bold' }}>
                                 Correo electrónico</label>
                             <input
                                 className='form-control '
@@ -42,7 +42,7 @@ const Login = () => {
                             )}
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            <label htmlFor="formBasicPassword" style={{ marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                            <label htmlFor="formBasicPassword" style={{ color:'#344E41', marginBottom: '0.5rem', fontWeight: 'bold' }}>
                                 Contraseña</label>
                             <input
                                 className='form-control '
