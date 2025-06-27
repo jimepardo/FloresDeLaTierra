@@ -11,7 +11,7 @@ function Header() {
 
     return (
         <header>
-            <nav className="navbar navbar-expand-md fixed-top" style={{ backgroundColor: '#A3B18A' }}>
+            <nav className="navbar navbar-expand-lg fixed-top" style={{ backgroundColor: '#A3B18A' }}>
                 <div className="container-fluid" >
                     <NavLink className='link' to="/">
                         <img className="navbar-brand" src={logo} style={{ width: '60%', height: '30%' }} />
@@ -28,8 +28,46 @@ function Header() {
                             <li className="nav-item">
                                 <NavLink className='link nav-link' to="/about"> ACERCA DE </NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink className='link nav-link' to="/products" >PRODUCTOS </NavLink>
+                            <li className="nav-item dropdown">
+                                <NavLink
+                                    className='nav-link dropdown-toggle'
+                                    to="/products"
+                                    id="productsDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false" >PRODUCTOS </NavLink>
+                                <ul className="dropdown-menu" aria-labelledby="productsDropdown">
+                                    <li className="nav-item dropdown dropend">
+                                        <a
+                                            className="dropdown-item dropdown-toggle"
+                                            to="#"
+                                            id="exteriorDropdown"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false">Plantas de Exterior</a>
+                                        <ul className="dropdown-menu" aria-labelledby="exteriorDropdown">
+                                            <li><NavLink className='link dropdown-item' to="/products/plantas-de-exterior/media-sombra" >Media Sombra</NavLink> </li>
+                                            <li><NavLink className='link dropdown-item' to="/products/plantas-de-exterior/pleno-sol">Pleno Sol</NavLink> </li>
+                                        </ul>
+                                    </li>
+                                    <li className="nav-item dropdown dropend">
+                                        <a
+                                            className='dropdown-item dropdown-toggle'
+                                            to="#"
+                                            id="interiorDropdown"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false">Plantas de Interior</a>
+                                        <ul className="dropdown-menu" aria-labelledby="interiorDropdown">
+                                            <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/con-flor">Con Flor</NavLink> </li>
+                                            <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/helechos">Helechos</NavLink> </li>
+                                            <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/palmeras">Palmeras</NavLink> </li>
+                                            <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/begonias">Begonias</NavLink> </li>
+                                        </ul>
+                                    </li>
+                                    <li><hr className="dropdown-divider" /></li>
+                                    <li><NavLink className="dropdown-item" to="/products" end>Todos los productos</NavLink></li>
+                                </ul>
                             </li>
                             <li className="nav-item">
                                 <NavLink className='link nav-link' to="/howto" > CUIDADOS </NavLink>
@@ -43,8 +81,8 @@ function Header() {
                             </li>
                             <li className="nav-item">
                                 <button type="button" className="btn btn-sm btnSession">
-                                    <NavLink to='/login' className='nav-link link' style={{color:'#DAD7CD'}}>
-                                        <i className="fa-solid fa-right-to-bracket" style={{color:'#DAD7CD'}}></i> Iniciar Sesión
+                                    <NavLink to='/login' className='nav-link link' style={{ color: '#DAD7CD' }}>
+                                        <i className="fa-solid fa-right-to-bracket" style={{ color: '#DAD7CD' }}></i> Iniciar Sesión
                                     </NavLink>
                                 </button>
                             </li>

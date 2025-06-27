@@ -15,6 +15,7 @@ import Admin from './pages/Admin';
 import ProtectedRoutes from './auth/ProtectedRoutes';
 import { CartContext } from './context/CartContext';
 import { useAuth } from './context/AuthContext';
+import ProductListByCategory from './pages/ProductListByCategory';
 
 
 function App() {
@@ -28,18 +29,22 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<ProtectedRoutes isAuthenticated={isAuthenticated} requiredRole='client' role={role} >
-          <Home/>
+          <Home />
         </ProtectedRoutes>} />
 
         <Route path='/login' element={<Login />} />
 
-        <Route path='/admin' element={<ProtectedRoutes isAuthenticated={isAuthenticated} requiredRole='admin'> 
-          <Admin /> 
+        <Route path='/admin' element={<ProtectedRoutes isAuthenticated={isAuthenticated} requiredRole='admin'>
+          <Admin />
         </ProtectedRoutes>} />
 
-        <Route path='/products' element={<Gallery />} />
-
         <Route path='/products/:id' element={<ProductDetail />} />
+
+        <Route path="/products/:category/:subcategory" element={<ProductListByCategory />} />
+
+        <Route path="/products/:category" element={<ProductListByCategory />} />
+
+        <Route path='/products' element={<Gallery />} />
 
         <Route path='/about' element={<About />} />
 

@@ -30,6 +30,10 @@ export const CartProvider = ({ children }) => {
             });
     }, []);
 
+    useEffect(()=>{
+        localStorage.setItem("cart", JSON.stringify(cartItems))
+    },[cartItems])
+
     const productsFiltered = products.filter((product) => product?.name.toLowerCase().includes(search.toLowerCase()))
 
     const addToCart = (product) => {
@@ -62,14 +66,21 @@ export const CartProvider = ({ children }) => {
 
     const emptyCart = () => {
         setCartItems([])
+        localStorage.removeItem("cart")
+        toast.info('El carrito se vació')
     };
 
+    const buy = () => {
+        setCartItems([])
+        localStorage.removeItem("cart")
+        toast.success('Compra finalizada!')
+    }
     
     return (
         <CartContext.Provider value={
             {
                 cartItems, products, load, error, addToCart, deleteProduct, emptyCart, isAuthenticated, isCartOpen, setCartOpen, setIsAuth,
-                search, setSearch
+                productsFiltered, search, setSearch, buy
             }
         } >
             {children}

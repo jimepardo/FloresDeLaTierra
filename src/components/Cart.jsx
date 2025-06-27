@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext';
 
 const Cart = ({ onClose }) => {
 
-    const { emptyCart, cartItems, isCartOpen, deleteProduct } = useContext(CartContext);
+    const { emptyCart, cartItems, isCartOpen, deleteProduct, buy } = useContext(CartContext);
 
     return (
         <div className={`cart-drawer ${isCartOpen ? 'open' : ''}`} >
@@ -28,7 +28,7 @@ const Cart = ({ onClose }) => {
                         <div className='cart-footer'>
                             <p style={{ color: '#344E41' }}>
                                 Total: ${cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)}</p>
-                            <button className='btn btn-fin'>Finalizar Compra</button>
+                            <button className='btn btn-fin' onClick={()=> buy()}>Finalizar Compra</button>
                         </div>
                     </>
                     )}

@@ -1,162 +1,332 @@
 [
-    {
-        "name": "Alegrías del Hogar",
-        "price": "457.79",
-        "stock": 37,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/exterior-7-mesa-de-trabajo-17-copia-51-4530c5a7d9571b100b16834758481695-640-0.webp",
-        "quantity": 0,
-        "id": "1"
-    },
-    {
-        "name": "Lavanda dentata",
-        "price": "563.15",
-        "stock": 36,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/lavanda1-8b4f35a6585b561e4615880446284566-640-0.webp",
-        "quantity": 0,
-        "id": "2"
-    },
-    {
-        "name": "Flor de Azúcar",
-        "price": "986.39",
-        "stock": 69,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/flor-de-azucar1-9c1eb955ee2e3662dc16342477834149-640-0.webp",
-        "quantity": 0,
-        "id": "3"
-    },
-    {
-        "name": "Prímula Obcónica",
-        "price": "360.75",
-        "stock": 65,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/primula-obconica-21-870d41ef5a561e232e16588663056850-640-0.webp",
-        "quantity": 0,
-        "id": "4"
-    },
-    {
-        "name": "Violeta de los Alpes",
-        "price": "853.69",
-        "stock": 97,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20210904_152630414_hdr1-5ab184104db65c067016307801082532-640-0.webp",
-        "quantity": 0,
-        "id": "5"
-    },
-    {
-        "name": "Malvón Italiano",
-        "price": "435.95",
-        "stock": 93,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img-20200529-wa0036-011-35358c443b592b460515907718820113-640-0.webp",
-        "quantity": 0,
-        "id": "6"
-    },
-    {
-        "name": "Photus",
-        "price": "204.99",
-        "stock": 81,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/pothus-hoja-grande-c1389dfdb21a0e3aec17131996017047-640-0.webp",
-        "quantity": 0,
-        "id": "7"
-    },
-    {
-        "name": "Geranio",
-        "price": "508.85",
-        "stock": 1,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/geranio-f59012ca427f09570417062055559903-640-0.webp",
-        "quantity": 0,
-        "id": "8"
-    },
-    {
-        "name": "Lazo de Amor",
-        "price": "66.19",
-        "stock": 65,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/lazo-amor-m121-3d59abf41f6f422e2d16138474433247-640-0.webp",
-        "quantity": 0,
-        "id": "9"
-    },
-    {
-        "name": "Aliso",
-        "price": "289.25",
-        "stock": 61,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/aliso1-6d2624407fb012fbbd16342477267561-640-0.webp",
-        "quantity": 0,
-        "id": "10"
-    },
-    {
-        "name": "Gazania",
-        "price": "98.25",
-        "stock": 54,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20210916_140540210_hdr11-206eca24d5c515223716318124548045-640-0.webp",
-        "quantity": 0,
-        "id": "11"
-    },
-    {
-        "name": "Jazmín Chino",
-        "price": "123.25",
-        "stock": 35,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/jazmin-chino-11-a14419da379adac87b16342284680058-640-0.webp",
-        "quantity": 0,
-        "id": "12"
-    },
-    {
-        "name": "Caléndula",
-        "price": "456.25",
-        "stock": 75,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/exterior-8-mesa-de-trabajo-16-copia-51-4362225ba807f4ca5516834791956338-240-0.webp",
-        "quantity": 0,
-        "id": "13"
-    },
-    {
-        "name": "Tomate Cherry",
-        "price": "299.15",
-        "stock": 10,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/tomate-cherry-m131-ff770dc01c2b232edc16078024061266-640-0.webp",
-        "quantity": 0,
-        "id": "14"
-    },
-    {
-        "name": "Pino Limón",
-        "price": "456.99",
-        "stock": 61,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/pino-lemon-3-l1-7904c57b3179e55a5116063104229934-640-0.webp",
-        "quantity": 0,
-        "id": "15"
-    },
-    {
-        "name": "Conejito",
-        "price": "345.99",
-        "stock": 100,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/conejito-11-c3bc77d9c8ce33449e16570541398008-640-0.webp",
-        "quantity": 0,
-        "id": "16"
-    },
-    {
-        "name": "Cactus",
-        "price": "236.25",
-        "stock": 34,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20200523_145409700_portrait-011-2248d089ef35e79b5d15902571311726-640-0.webp",
-        "quantity": 0,
-        "id": "17"
-    },
-    {
-        "name": "Vinca",
-        "price": "678.25",
-        "stock": 47,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20200523_145409700_portrait-011-2248d089ef35e79b5d15902571311726-640-0.webp",
-        "quantity": 0,
-        "id": "18"
-    },
-    {
-        "name": "Verbena",
-        "price": "321.65",
-        "stock": 62,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/verbena-m151-4e23c9201b20f1cf2716111610278523-640-0.webp",
-        "quantity": 0,
-        "id": "19"
-    },
-    {
-        "name": "Azalea Simple",
-        "price": "336.25",
-        "stock": 54,
-        "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/azalea-simple-31-11a9a590553bb7236416342475910133-640-0.webp",
-        "quantity": 0,
-        "id": "20"
-    }
+  {
+    "name": "Alegrías del Hogar",
+    "price": 457.79,
+    "stock": 37,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/exterior-7-mesa-de-trabajo-17-copia-51-4530c5a7d9571b100b16834758481695-640-0.webp",
+    "quantity": 0,
+    "description": "Forma matas globosas. Se puede podar a fin del Invierno dejando tallos de 5 cm para que rebrote. Se comporta como perenne en lugares cálidos. No soporta heladas ni lugares ventosos. Cuidar del encharcamiento en el sustrato.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Media Sombra",
+    "id": 1
+  },
+  {
+    "name": "Lavanda dentata",
+    "price": 563.15,
+    "stock": 36,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/lavanda1-8b4f35a6585b561e4615880446284566-640-0.webp",
+    "quantity": 0,
+    "description": "Arbusto bajo y muy ramificado con follaje verde grisáceo. Originaria de lugares secos, necesita sol (de 4 hs en adelante), y riego moderado. Tolera el viento. Podar luego de la floración un tercio de los tallos para que rebrote desde la base.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 2
+  },
+  {
+    "name": "Flor de Azúcar",
+    "price": 986.39,
+    "stock": 69,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/flor-de-azucar1-9c1eb955ee2e3662dc16342477834149-640-0.webp",
+    "quantity": 0,
+    "description": "A pleno sol se comportan como perennes y florecen permanentemente. En lugares húmedos es susceptible al oídio, un hongo que mancha sus hojas e impide su floración. Se pueden recortar a fin del Invierno, y del Verano para mantenerlas compactas.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 3
+  },
+  {
+    "name": "Prímula Obcónica",
+    "price": 360.75,
+    "stock": 65,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/primula-obconica-21-870d41ef5a561e232e16588663056850-640-0.webp",
+    "quantity": 0,
+    "description": "Florece desde que empieza el frío hasta que empieza el Verano. Forma matas bajas que crecen hacia los costados. Se usa como plantín estacional, pero puede sobrevivir al Verano en la sombra. No colocar en lugares ventosos.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Media Sombra",
+    "id": 4
+  },
+  {
+    "name": "Violeta de los Alpes",
+    "price": 853.69,
+    "stock": 97,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20210904_152630414_hdr1-5ab184104db65c067016307801082532-640-0.webp",
+    "quantity": 0,
+    "description": "Plantas bulbosas que forman una mata con hojas acorazonadas. Brotan en Otoño y florecen en Invierno y Primavera. En Verano entran en dormición y pierden gran parte del follaje, se pueden conservar de un año al otro dejándolas en la sombra y regándolas esporádicamente. El riego debe ser con agua a temperatura ambiente, no hace falta colocarles hielo.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Media Sombra",
+    "id": 5
+  },
+  {
+    "name": "Malvón Italiano",
+    "price": 435.95,
+    "stock": 93,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img-20200529-wa0036-011-35358c443b592b460515907718820113-640-0.webp",
+    "quantity": 0,
+    "description": "Herbácea perenne, muy florífera. Es una variedad de malvón compacto con flores dobles que vienen en diferentes colores de flor. Las hojas son verdes o con una franja bordó. Soporta sol, viento, y riegos moderados. Se puede podar a fin del Otoño, o Invierno para controlar su crecimiento y estimular la floración.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 6
+  },
+  {
+    "name": "Pothus",
+    "price": 204.99,
+    "stock": 81,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/pothus-hoja-grande-c1389dfdb21a0e3aec17131996017047-640-0.webp",
+    "quantity": 0,
+    "description": "El Potus común es una trepadora en su hábitat natural, desarrolla hojas gigantes si trepa por algún muro. Se utiliza como planta colgante para interior, ya que sus tallos llegan a colgar 60 cm.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Media Sombra",
+    "id": 7
+  },
+  {
+    "name": "Geranio",
+    "price": 508.85,
+    "stock": 1,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/geranio-f59012ca427f09570417062055559903-640-0.webp",
+    "quantity": 0,
+    "description": "Es una planta herbácea perenne. Se puede usar como colgante o cubresuelos ya que forma matas con guías largas. Muy resistente a lugares muy expuestos al sol y riegos moderados.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 8
+  },
+  {
+    "name": "Lazo de Amor",
+    "price": 66.19,
+    "stock": 65,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/lazo-amor-m121-3d59abf41f6f422e2d16138474433247-640-0.webp",
+    "quantity": 0,
+    "description": "Forma una mata prolija todo el año. La variedad `Vittatum` tiene la hoja con una franja central blanca, mientras que la variedad `Variegatum` tiene franjas blancas en los márgenes de la hoja. Se utiliza como colgante por sus largas guías donde crecen hijuelos. La luz intensa acentúa el contraste de las hojas.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Media Sombra",
+    "id": 9
+  },
+  {
+    "name": "Aliso",
+    "price": 289.25,
+    "stock": 61,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/aliso1-6d2624407fb012fbbd16342477267561-640-0.webp",
+    "quantity": 0,
+    "description": "Plantín de estación. Forma matas bajas que avanzan sobre el suelo. Florece más intensamente con más de 4 hs de sol directo. Flores muy perfumadas que atraen abejas. No descuidar el riego si está a pleno sol en días muy calurosos.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 10
+  },
+  {
+    "name": "Gazania",
+    "price": 98.25,
+    "stock": 54,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20210916_140540210_hdr11-206eca24d5c515223716318124548045-640-0.webp",
+    "quantity": 0,
+    "description": "Planta perenne que se comporta como anual en zonas con Inviernos fríos. Forma una roseta con hojas alargadas y lobuladas, a veces con vellosidad grisácea. Soporta sol, viento, y riegos moderados. Las flores se abren de día, y se cierran cada noche o en días nublados.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 11
+  },
+  {
+    "name": "Jazmín Chino",
+    "price": 123.25,
+    "stock": 35,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/jazmin-chino-11-a14419da379adac87b16342284680058-640-0.webp",
+    "quantity": 0,
+    "description": "Trepadora de hoja perenne, necesita soportes fuertes para trepar. Podar luego de la floración para controlar su exuberante crecimiento y generar una planta más tupida.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 12
+  },
+  {
+    "name": "Caléndula",
+    "price": 456.25,
+    "stock": 75,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/exterior-8-mesa-de-trabajo-16-copia-51-4362225ba807f4ca5516834791956338-240-0.webp",
+    "quantity": 0,
+    "description": "Plantin estacional. Forma matas bajas que crecen hacia los costados. Se utiliza en huertas orgánicas porque atrae insectos benéficos. Tiene propiedades curativas.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 13
+  },
+  {
+    "name": "Tomate Cherry",
+    "price": 299.15,
+    "stock": 10,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/tomate-cherry-m131-ff770dc01c2b232edc16078024061266-640-0.webp",
+    "quantity": 0,
+    "description": "Planta anual que forma una mata que no requiere tutorado. No descuidar el riego, sobre todo durante la formación de los frutos. Ralear los brotes vegetativos que salen en las axilas de las hojas.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 14
+  },
+  {
+    "name": "Pino Limón",
+    "price": 456.99,
+    "stock": 61,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/pino-lemon-3-l1-7904c57b3179e55a5116063104229934-640-0.webp",
+    "quantity": 0,
+    "description": "Conífera de crecimiento piramidal, compacta, su follaje despide aroma a limón al estrujarse. Puede llegar a los 3- 5 m en 10 años. Delicado con respecto al riego, no tolera la sequía ni los encharcamientos. El sol intenso mejora las notas amarillentas de su follaje.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 15
+  },
+  {
+    "name": "Conejito",
+    "price": 345.99,
+    "stock": 100,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/conejito-11-c3bc77d9c8ce33449e16570541398008-640-0.webp",
+    "quantity": 0,
+    "description": "Hay variedades de diferentes alturas. Se cultiva como una planta estacional pero puede llegar a comportarse como perenne, y también resembrarse.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 16
+  },
+  {
+    "name": "Cactus",
+    "price": 236.25,
+    "stock": 34,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/img_20200523_145409700_portrait-011-2248d089ef35e79b5d15902571311726-640-0.webp",
+    "quantity": 0,
+    "description": "Plantas suculentas que guardan agua en sus tallos, adaptadas en su mayoría a condiciones de cultivo con alta exposición solar y riego escaso. No regar con tiempo frío y húmedo. No prosperan sin sol directo.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 17
+  },
+  {
+    "name": "Vinca",
+    "price": 678.25,
+    "stock": 47,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/vinca-df2db053002ec8860417341100267474-640-0.jpeg",
+    "quantity": 0,
+    "description": "Se utiliza como plantín anual, pero puede sobrevivir al Invierno si se encuentra en un lugar protegido. Llega hasta el metro de altura en grandes contenedores o tierra. No descuidar el riego si se encuentra a pleno sol.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 18
+  },
+  {
+    "name": "Verbena",
+    "price": 321.65,
+    "stock": 62,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/verbena-m151-4e23c9201b20f1cf2716111610278523-640-0.webp",
+    "quantity": 0,
+    "description": "Planta herbácea rastrera. Se utiliza como plantín anual, pero puede sobrevivir al Invierno si se encuentra en un lugar protegido. Resiste sol y viento, pero bien regada. Atraen mariposas.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 19
+  },
+  {
+    "name": "Azalea Simple",
+    "price": 336.25,
+    "stock": 54,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/azalea-simple-31-11a9a590553bb7236416342475910133-640-0.webp",
+    "quantity": 0,
+    "description": "Forma un arbusto globoso de hojas perennes. Se puede podar luego de la floración. Si está en tierra o en una maceta grande puede tolerar sol intenso, sin descuidar el riego. No soporta los lugares ventosos y secos.",
+    "category": "Plantas de Exterior",
+    "subcategory": "Pleno Sol",
+    "id": 20
+  },
+  {
+    "name": "Orquídea Phalaen",
+    "price": 59000,
+    "stock": 29,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/orquidea-phalaenopsis-11-0363774dbd572969e816588597471461-640-0.jpeg",
+    "quantity": 0,
+    "description": "Orquídea de grandes hojas ovaladas coriáceas, que salen alternadamente de un tallo basal. La vara floral sale de las axilas de las hojas. Para inducir la floración es conveniente colocar la planta en una habitación más fresca (13°C-18°C), o en el exterior protegida del sol y la lluvia, durante un mes, lo ideal es en Abril en Buenos Aires.",
+    "category": "Plantas de Interior",
+    "subcategory": "Con Flor",
+    "id": 21
+  },
+  {
+    "name": "Aechmea Fendleri",
+    "price": 7900,
+    "stock": 34,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/bromelia-sp-21-95cbd436fcc016a5a515882537022746-640-0.png",
+    "quantity": 0,
+    "description": "Cada planta florece solo una vez. Luego de la floración comienzan a crecer 2-3 tallos que florecen a los 2 años aproximadamente. La inflorescencia dura aproximadamente 4 meses, dando una sucesión de pequeñas flores.",
+    "category": "Plantas de Interior",
+    "subcategory": "Con Flor",
+    "id": 22
+  },
+  {
+    "name": "Vriesea Elan",
+    "price": 28000,
+    "stock": 14,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/porta101-2da91fd9ce26576adc15701134000978-640-0.png",
+    "quantity": 0,
+    "description": "Forma una roseta con hojas de hasta 40 cm de largo, de color verde oscuro brillante. Luego de 2 años de crecimiento aproximadamente culmina su desarrollo, cuando florece por única vez. Luego de la floración desarrolla renuevos en la base que reemplazarán a la planta madre. La vara floral dura 4 meses.",
+    "category": "Plantas de Interior",
+    "subcategory": "Con Flor",
+    "id": 23
+  },
+  {
+    "name": "Guzmania Lingulata",
+    "price": 28200,
+    "stock": 10,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/guzmania-lingulata-31-88eccfbc7f0c904ad416409660313122-640-0.jpg",
+    "quantity": 0,
+    "description": "Cada planta florece sólo una vez. Luego de la floración comienzan a crecer 2-3 tallos que florecen a los 2 años aproximadamente. Ubicar en un lugar bien luminoso y regar moderadamente, colocando agua también en la roseta central.",
+    "category": "Plantas de Interior",
+    "subcategory": "Con Flor",
+    "id": 24
+  },
+  {
+    "name": "Helecho Nephro",
+    "price": 6800,
+    "stock": 28,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/helecho-nephrolepis-ariane-ab382719f55826bc5617168332520493-640-0.jpg",
+    "quantity": 0,
+    "description": "Se usa como planta colgante para interior. Es una variedad de hojas colgantes verde claro. Le gustan los lugares luminosos y húmedos.",
+    "category": "Plantas de Interior",
+    "subcategory": "Helechos",
+    "id": 25
+  },
+  {
+    "name": "Helecho Polypo",
+    "price": 7500,
+    "stock": 32,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/polypodium-91a86f7b02e0954e9617075962145047-640-0.jpg",
+    "quantity": 0,
+    "description": "Forman una mata de hojas largas bien divididas con rizomas escamosos. Se usan como planta colgante.",
+    "category": "Plantas de Interior",
+    "subcategory": "Helechos",
+    "id": 26
+  },
+  {
+    "name": "Palmito",
+    "price": 6800,
+    "stock": 26,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/palmito-aff02fc6ed754eafff17076703723129-640-0.jpg",
+    "quantity": 0,
+    "description": "Crece verticalmente y se venden de a varios ejemplares por maceta para hacerlos más frondosos. Sus hojas llegan al metro y media de largo con el tiempo. Muy sensible al exceso de riego. No soporta el viento y el frío intenso.",
+    "category": "Plantas de Interior",
+    "subcategory": "Palmeras",
+    "id": 27
+  },
+  {
+    "name": "Begonia Elatior",
+    "price": 23000,
+    "stock": 13,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/exterior-8-mixmesa-de-trabajo-18-copia-6-8709067f4b0809e5b116969373715560-640-0.png",
+    "quantity": 0,
+    "description": "Planta herbácea que requiere riegos moderados. Es ideal para un interior bien luminoso, donde sus flores muy duraderas saldrán varias veces por año. Colocar en un lugar ventilado y tratar de que no quede agua acumulada en sus hojas. Se puede recortar para emprolijarla.",
+    "category": "Plantas de Interior",
+    "subcategory": "Begonias",
+    "id": 28
+  },
+  {
+    "name": "Begonia Rex",
+    "price": 6800,
+    "stock": 22,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/begonia-rex-345072d7736041499417075928650388-640-0.jpg",
+    "quantity": 0,
+    "description": "Es un grupo de begonias rizomatosas que forman una mata de hojas brillosas con diferentes colores y formas, generalmente con marcas plateadas. Hay que cultivarla en lugares luminosos y regarla moderadamente. Prefiere macetas más anchas que altas.",
+    "category": "Plantas de Interior",
+    "subcategory": "Begonias",
+    "id": 29
+  },
+  {
+    "name": "Begonia Maculata",
+    "price": 16000,
+    "stock": 12,
+    "img": "https://acdn-us.mitiendanube.com/stores/913/526/products/begonia-maculata-4-6675e9985e911f593817060360197050-640-0.jpg",
+    "quantity": 0,
+    "description": "Planta herbaces de tallos erectos de hasta 1 m. El follaje es verde con manchas de color blanco plateado arriba, rojo abajo y tiene una base en forma de corazón, una textura ondulada y un margen ondulado.",
+    "category": "Plantas de Interior",
+    "subcategory": "Begonias",
+    "id": 30
+  }
 ]
