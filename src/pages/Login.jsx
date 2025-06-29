@@ -1,10 +1,7 @@
-import React, { useContext, useState } from 'react';
-import { CartContext } from '../context/CartContext';
+import React from 'react';
 import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
-
-    const { setIsAuth } = useContext(CartContext);
 
     const { email, setEmail, password, setPassword, handleSubmit, errors } = useAuth();
 

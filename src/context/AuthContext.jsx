@@ -1,6 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CartContext } from './CartContext';
 
 const AuthContext = createContext();
 
@@ -11,8 +10,6 @@ export const AuthProvider = ({ children }) => {
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
 
-    const { setIsAuth } = useContext(CartContext);
-    const [role, setRole] = useState('');
     const [userInfo, setUserInfo] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -22,17 +19,16 @@ export const AuthProvider = ({ children }) => {
         const userName = localStorage.getItem('userName');
 
         if (isAuthenticated) {
-            setIsAuth(true);
             setIsLoggedIn(true);
             setUserInfo({ name: userName, role: userRole });
 
         }
-        if (userRole === 'admin') {
+         if (userRole === 'admin') {
             navigate('/admin');
         } else if (userRole === 'client') {
             navigate('/');
-        }
-    }, [setIsAuth, navigate])
+        } 
+    }, [])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -56,7 +52,6 @@ export const AuthProvider = ({ children }) => {
             if (!foundUser) {
                 setErrors({ email: 'Las credenciales son inválidas' });
             } else {
-                setIsAuth(true);
                 setIsLoggedIn(true);
                 setUserInfo({ name: foundUser.name, role: foundUser.role });
 
@@ -64,6 +59,7 @@ export const AuthProvider = ({ children }) => {
                 localStorage.setItem('role', foundUser.role);
                 localStorage.setItem('userName', foundUser.name);
                 if (foundUser.role === 'admin') {
+                    localStorage.setItem('cart','');
                     navigate('/admin');
                 } else {
                     navigate('/');
@@ -76,7 +72,6 @@ export const AuthProvider = ({ children }) => {
     };
 
     const logout = () => {
-        setIsAuth(false);
         setIsLoggedIn(false);
         setUserInfo(null);
         localStorage.removeItem('isAuth');

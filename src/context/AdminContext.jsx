@@ -66,7 +66,7 @@ export const AdminProvider = ({ children }) => {
             }
             const data = await response.json()
             Swal.fire({
-                title: ":)!",
+                title: `${product.name}` + " añadido",
                 text: "Producto agregado correctamente!",
                 icon: "success"
             });
@@ -94,7 +94,7 @@ export const AdminProvider = ({ children }) => {
             if (!response.ok) throw Error('Error al actualizar el producto')
             const data = await response.json()
             Swal.fire({
-                title: ":)!",
+                title: `${product.name}`+ " ha sido editado",
                 text: "Producto actualizado correctamente!",
                 icon: "success"
             });
@@ -124,7 +124,7 @@ export const AdminProvider = ({ children }) => {
         });
         if (result.isConfirmed) {
             try {
-                const response = await fetch(apiUrl`/${id}`, {
+                const response = await fetch(`${apiUrl}/${id}`, {
                     method: 'DELETE'
                 })
                 if (!response.ok) throw Error('Error al eliminar')

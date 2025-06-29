@@ -1,3 +1,11 @@
+:root {
+    --beige: #DAD7CD;
+    --v-claro: #A3B18A;
+    --v-medio: #588157;
+    --v-intermedio: #3A5A40;
+    --v-oscuro: #344E41;
+}
+
 .container {
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -61,16 +69,16 @@
 .edit-button {
     margin-right: 10px;
     padding: 5px 10px;
-    background-color: #2196F3;
-    color: white;
+    background-color: var(--v-claro);
+    color: var(--v-oscuro);
     border: none;
     cursor: pointer;
 }
 
 .delete-button {
     padding: 5px 10px;
-    background-color: #f44336;
-    color: white;
+    background-color: var(--v-oscuro);
+    color: var(--beige);
     border: none;
     cursor: pointer;
 }
@@ -90,6 +98,51 @@
 }
 
 .link.active {
-    color: #DAD7CD;
+    color: var(--beige);
     font-weight: bold;
+}
+
+.breadcrumb {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none; 
+    background: linear-gradient(1deg, #A3B18A, #DAD7CD);; 
+    border-radius: 0.3rem; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    font-size: 0.95rem; 
+}
+
+.breadcrumb-item {
+    display: flex; 
+    align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">"; 
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: #6B8B5B; 
+}
+
+.breadcrumb-item a {
+    color: var(--v-oscuro);
+    text-decoration: none; 
+    transition: color 0.2s ease-in-out; 
+}
+
+.breadcrumb-item a:hover {
+    color: #588157; 
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: #728175; 
+    font-weight: 500; 
+    pointer-events: none; 
+}
+
+.breadcrumb ol {
+    margin-bottom: 0; 
 }

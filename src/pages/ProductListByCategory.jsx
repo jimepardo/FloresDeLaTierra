@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import Product from '../components/Product';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 function ProductListByCategory() {
     const { category, subcategory } = useParams();
@@ -9,8 +9,9 @@ function ProductListByCategory() {
 
     const [search, setSearch] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
-
+    
     useEffect(() => {
+
         if (!products || products.length === 0) {
             setFilteredProducts([]);
             return;
@@ -66,11 +67,31 @@ function ProductListByCategory() {
         pageNumbers.push(i);
     }
 
+    const formatUrlSegment = (segment) => {
+        return segment ? segment.replace(/-/g, ' ').split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') : '';
+    };
+
     return (
         <div id='main-content-wrapper'><br/>
             <div className="" style={{ padding: '20px', maxWidth: '80%', margin: '0 auto'}}>
                 <h1 style={{ textAlign: 'center', color: '#344E41' }}>{displayTitle()}</h1>
                 <br /><br/>
+                 <nav aria-label="breadcrumb">
+                    <ol className="breadcrumb">
+                        <li className="breadcrumb-item"><Link to="/">Inicio</Link></li>
+                        <li className="breadcrumb-item"><Link to="/products">Productos</Link></li>
+                        {category && (
+                            <li className={`breadcrumb-item ${!subcategory ? 'active' : ''}`} aria-current={!subcategory ? 'page' : undefined}>
+                                {!subcategory ? formatUrlSegment(category) : <Link to={`/products/${category}`}>{formatUrlSegment(category)}</Link>}
+                            </li>
+                        )}
+                        {subcategory && (
+                            <li className="breadcrumb-item active" aria-current="page">
+                                {formatUrlSegment(subcategory)}
+                            </li>
+                        )}
+                    </ol>
+                </nav>
                 {/* Input de Búsqueda */}
                 <div className="row justify-content-end mb-4 container-fluid">
                     <div className="col-12 col-md-4 col-lg-3">

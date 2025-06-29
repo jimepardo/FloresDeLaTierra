@@ -24,14 +24,14 @@ const ProductDetail = () => {
             return;
         }
 
-        const foundProduct = products.find(p => p.id === Number(id));
+        const foundProduct = products.find(p => p.id == (id));
         setProduct(foundProduct);
         setLoadingDetail(false);
 
         if (foundProduct) {
-            setQuantity(foundProduct.stock > 0 ? 1 : 0); // Si hay stock, empieza en 1, si no, en 0
+            setQuantity(foundProduct.stock > 0 ? 1 : 0); 
         } else {
-            setQuantity(0); // Si no se encuentra el producto, la cantidad es 0
+            setQuantity(0); 
         }
 
     }, [id, products, load])
@@ -69,8 +69,36 @@ const ProductDetail = () => {
         });
     }
 
+    const toUrlSlug = (name) => {
+        return name ? name.toLowerCase().replace(/\s+/g, '-') : '';
+    };
+
     return (
         <div id='main-content-wrapper'>
+            <br/>
+            <nav aria-label="breadcrumb" className='container-fluid'>
+                    <ol className="breadcrumb">
+                        <li className="breadcrumb-item"><Link to="/">Inicio</Link></li>
+                        <li className="breadcrumb-item"><Link to="/products">Productos</Link></li>
+                        {product.category && (
+                            <li className="breadcrumb-item">
+                                <Link to={`/products/${toUrlSlug(product.category)}`}>
+                                    {product.category}
+                                </Link>
+                            </li>
+                        )}
+                        {product.subcategory && (
+                            <li className="breadcrumb-item">
+                                <Link to={`/products/${toUrlSlug(product.category)}/${toUrlSlug(product.subcategory)}`}>
+                                    {product.subcategory}
+                                </Link>
+                            </li>
+                        )}
+                        <li className="breadcrumb-item active" aria-current="page">
+                            {product.name}
+                        </li>
+                    </ol>
+                </nav>
             <section
                 style={{
                     maxWidth: '600px',
@@ -82,6 +110,7 @@ const ProductDetail = () => {
                     background: '#A3B18A',
                 }}
             >
+                
                 <h1 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#333' }}>
                     {product.name}
                 </h1>

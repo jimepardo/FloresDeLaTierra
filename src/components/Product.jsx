@@ -44,7 +44,7 @@ const Product = ({ product }) => {
                 </div>
                 <div className='d-inline-flex gap-1'>
                     <button className='btn btn-add' style={{ display: quantity == 0 ? 'none' : 'block' }} onClick={() => addToCart({ ...product, quantity: quantity })} >Agregar</button>
-                    <Link role='button' className='btn btn-seem' to={`/products/${product.id}`}> Ver más</Link>
+                    <Link role='button' className='btn btn-seem' to={`/product/${product.id}`}> Ver más</Link>
                 </div>
             </section>
         </div>

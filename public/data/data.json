@@ -8,7 +8,7 @@
     "description": "Forma matas globosas. Se puede podar a fin del Invierno dejando tallos de 5 cm para que rebrote. Se comporta como perenne en lugares cálidos. No soporta heladas ni lugares ventosos. Cuidar del encharcamiento en el sustrato.",
     "category": "Plantas de Exterior",
     "subcategory": "Media Sombra",
-    "id": 1
+    "id": "1"
   },
   {
     "name": "Lavanda dentata",
@@ -19,7 +19,7 @@
     "description": "Arbusto bajo y muy ramificado con follaje verde grisáceo. Originaria de lugares secos, necesita sol (de 4 hs en adelante), y riego moderado. Tolera el viento. Podar luego de la floración un tercio de los tallos para que rebrote desde la base.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 2
+    "id": "2"
   },
   {
     "name": "Flor de Azúcar",
@@ -30,7 +30,7 @@
     "description": "A pleno sol se comportan como perennes y florecen permanentemente. En lugares húmedos es susceptible al oídio, un hongo que mancha sus hojas e impide su floración. Se pueden recortar a fin del Invierno, y del Verano para mantenerlas compactas.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 3
+    "id": "3"
   },
   {
     "name": "Prímula Obcónica",
@@ -41,7 +41,7 @@
     "description": "Florece desde que empieza el frío hasta que empieza el Verano. Forma matas bajas que crecen hacia los costados. Se usa como plantín estacional, pero puede sobrevivir al Verano en la sombra. No colocar en lugares ventosos.",
     "category": "Plantas de Exterior",
     "subcategory": "Media Sombra",
-    "id": 4
+    "id": "4"
   },
   {
     "name": "Violeta de los Alpes",
@@ -52,7 +52,7 @@
     "description": "Plantas bulbosas que forman una mata con hojas acorazonadas. Brotan en Otoño y florecen en Invierno y Primavera. En Verano entran en dormición y pierden gran parte del follaje, se pueden conservar de un año al otro dejándolas en la sombra y regándolas esporádicamente. El riego debe ser con agua a temperatura ambiente, no hace falta colocarles hielo.",
     "category": "Plantas de Exterior",
     "subcategory": "Media Sombra",
-    "id": 5
+    "id": "5"
   },
   {
     "name": "Malvón Italiano",
@@ -63,7 +63,7 @@
     "description": "Herbácea perenne, muy florífera. Es una variedad de malvón compacto con flores dobles que vienen en diferentes colores de flor. Las hojas son verdes o con una franja bordó. Soporta sol, viento, y riegos moderados. Se puede podar a fin del Otoño, o Invierno para controlar su crecimiento y estimular la floración.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 6
+    "id": "6"
   },
   {
     "name": "Pothus",
@@ -74,7 +74,7 @@
     "description": "El Potus común es una trepadora en su hábitat natural, desarrolla hojas gigantes si trepa por algún muro. Se utiliza como planta colgante para interior, ya que sus tallos llegan a colgar 60 cm.",
     "category": "Plantas de Exterior",
     "subcategory": "Media Sombra",
-    "id": 7
+    "id": "7"
   },
   {
     "name": "Geranio",
@@ -85,7 +85,7 @@
     "description": "Es una planta herbácea perenne. Se puede usar como colgante o cubresuelos ya que forma matas con guías largas. Muy resistente a lugares muy expuestos al sol y riegos moderados.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 8
+    "id": "8"
   },
   {
     "name": "Lazo de Amor",
@@ -96,7 +96,7 @@
     "description": "Forma una mata prolija todo el año. La variedad `Vittatum` tiene la hoja con una franja central blanca, mientras que la variedad `Variegatum` tiene franjas blancas en los márgenes de la hoja. Se utiliza como colgante por sus largas guías donde crecen hijuelos. La luz intensa acentúa el contraste de las hojas.",
     "category": "Plantas de Exterior",
     "subcategory": "Media Sombra",
-    "id": 9
+    "id": "9"
   },
   {
     "name": "Aliso",
@@ -107,7 +107,7 @@
     "description": "Plantín de estación. Forma matas bajas que avanzan sobre el suelo. Florece más intensamente con más de 4 hs de sol directo. Flores muy perfumadas que atraen abejas. No descuidar el riego si está a pleno sol en días muy calurosos.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 10
+    "id": "10"
   },
   {
     "name": "Gazania",
@@ -118,7 +118,7 @@
     "description": "Planta perenne que se comporta como anual en zonas con Inviernos fríos. Forma una roseta con hojas alargadas y lobuladas, a veces con vellosidad grisácea. Soporta sol, viento, y riegos moderados. Las flores se abren de día, y se cierran cada noche o en días nublados.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 11
+    "id": "11"
   },
   {
     "name": "Jazmín Chino",
@@ -129,7 +129,7 @@
     "description": "Trepadora de hoja perenne, necesita soportes fuertes para trepar. Podar luego de la floración para controlar su exuberante crecimiento y generar una planta más tupida.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 12
+    "id": "12"
   },
   {
     "name": "Caléndula",
@@ -140,7 +140,7 @@
     "description": "Plantin estacional. Forma matas bajas que crecen hacia los costados. Se utiliza en huertas orgánicas porque atrae insectos benéficos. Tiene propiedades curativas.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 13
+    "id": "13"
   },
   {
     "name": "Tomate Cherry",
@@ -151,7 +151,7 @@
     "description": "Planta anual que forma una mata que no requiere tutorado. No descuidar el riego, sobre todo durante la formación de los frutos. Ralear los brotes vegetativos que salen en las axilas de las hojas.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 14
+    "id": "14"
   },
   {
     "name": "Pino Limón",
@@ -162,7 +162,7 @@
     "description": "Conífera de crecimiento piramidal, compacta, su follaje despide aroma a limón al estrujarse. Puede llegar a los 3- 5 m en 10 años. Delicado con respecto al riego, no tolera la sequía ni los encharcamientos. El sol intenso mejora las notas amarillentas de su follaje.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 15
+    "id": "15"
   },
   {
     "name": "Conejito",
@@ -173,7 +173,7 @@
     "description": "Hay variedades de diferentes alturas. Se cultiva como una planta estacional pero puede llegar a comportarse como perenne, y también resembrarse.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 16
+    "id": "16"
   },
   {
     "name": "Cactus",
@@ -184,7 +184,7 @@
     "description": "Plantas suculentas que guardan agua en sus tallos, adaptadas en su mayoría a condiciones de cultivo con alta exposición solar y riego escaso. No regar con tiempo frío y húmedo. No prosperan sin sol directo.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 17
+    "id": "17"
   },
   {
     "name": "Vinca",
@@ -195,7 +195,7 @@
     "description": "Se utiliza como plantín anual, pero puede sobrevivir al Invierno si se encuentra en un lugar protegido. Llega hasta el metro de altura en grandes contenedores o tierra. No descuidar el riego si se encuentra a pleno sol.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 18
+    "id": "18"
   },
   {
     "name": "Verbena",
@@ -206,7 +206,7 @@
     "description": "Planta herbácea rastrera. Se utiliza como plantín anual, pero puede sobrevivir al Invierno si se encuentra en un lugar protegido. Resiste sol y viento, pero bien regada. Atraen mariposas.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 19
+    "id": "19"
   },
   {
     "name": "Azalea Simple",
@@ -217,7 +217,7 @@
     "description": "Forma un arbusto globoso de hojas perennes. Se puede podar luego de la floración. Si está en tierra o en una maceta grande puede tolerar sol intenso, sin descuidar el riego. No soporta los lugares ventosos y secos.",
     "category": "Plantas de Exterior",
     "subcategory": "Pleno Sol",
-    "id": 20
+    "id": "20"
   },
   {
     "name": "Orquídea Phalaen",
@@ -228,7 +228,7 @@
     "description": "Orquídea de grandes hojas ovaladas coriáceas, que salen alternadamente de un tallo basal. La vara floral sale de las axilas de las hojas. Para inducir la floración es conveniente colocar la planta en una habitación más fresca (13°C-18°C), o en el exterior protegida del sol y la lluvia, durante un mes, lo ideal es en Abril en Buenos Aires.",
     "category": "Plantas de Interior",
     "subcategory": "Con Flor",
-    "id": 21
+    "id": "21"
   },
   {
     "name": "Aechmea Fendleri",
@@ -239,7 +239,7 @@
     "description": "Cada planta florece solo una vez. Luego de la floración comienzan a crecer 2-3 tallos que florecen a los 2 años aproximadamente. La inflorescencia dura aproximadamente 4 meses, dando una sucesión de pequeñas flores.",
     "category": "Plantas de Interior",
     "subcategory": "Con Flor",
-    "id": 22
+    "id": "22"
   },
   {
     "name": "Vriesea Elan",
@@ -250,7 +250,7 @@
     "description": "Forma una roseta con hojas de hasta 40 cm de largo, de color verde oscuro brillante. Luego de 2 años de crecimiento aproximadamente culmina su desarrollo, cuando florece por única vez. Luego de la floración desarrolla renuevos en la base que reemplazarán a la planta madre. La vara floral dura 4 meses.",
     "category": "Plantas de Interior",
     "subcategory": "Con Flor",
-    "id": 23
+    "id": "23"
   },
   {
     "name": "Guzmania Lingulata",
@@ -261,7 +261,7 @@
     "description": "Cada planta florece sólo una vez. Luego de la floración comienzan a crecer 2-3 tallos que florecen a los 2 años aproximadamente. Ubicar en un lugar bien luminoso y regar moderadamente, colocando agua también en la roseta central.",
     "category": "Plantas de Interior",
     "subcategory": "Con Flor",
-    "id": 24
+    "id": "24"
   },
   {
     "name": "Helecho Nephro",
@@ -272,7 +272,7 @@
     "description": "Se usa como planta colgante para interior. Es una variedad de hojas colgantes verde claro. Le gustan los lugares luminosos y húmedos.",
     "category": "Plantas de Interior",
     "subcategory": "Helechos",
-    "id": 25
+    "id": "25"
   },
   {
     "name": "Helecho Polypo",
@@ -283,7 +283,7 @@
     "description": "Forman una mata de hojas largas bien divididas con rizomas escamosos. Se usan como planta colgante.",
     "category": "Plantas de Interior",
     "subcategory": "Helechos",
-    "id": 26
+    "id": "26"
   },
   {
     "name": "Palmito",
@@ -294,7 +294,7 @@
     "description": "Crece verticalmente y se venden de a varios ejemplares por maceta para hacerlos más frondosos. Sus hojas llegan al metro y media de largo con el tiempo. Muy sensible al exceso de riego. No soporta el viento y el frío intenso.",
     "category": "Plantas de Interior",
     "subcategory": "Palmeras",
-    "id": 27
+    "id": "27"
   },
   {
     "name": "Begonia Elatior",
@@ -305,7 +305,7 @@
     "description": "Planta herbácea que requiere riegos moderados. Es ideal para un interior bien luminoso, donde sus flores muy duraderas saldrán varias veces por año. Colocar en un lugar ventilado y tratar de que no quede agua acumulada en sus hojas. Se puede recortar para emprolijarla.",
     "category": "Plantas de Interior",
     "subcategory": "Begonias",
-    "id": 28
+    "id": "28"
   },
   {
     "name": "Begonia Rex",
@@ -316,7 +316,7 @@
     "description": "Es un grupo de begonias rizomatosas que forman una mata de hojas brillosas con diferentes colores y formas, generalmente con marcas plateadas. Hay que cultivarla en lugares luminosos y regarla moderadamente. Prefiere macetas más anchas que altas.",
     "category": "Plantas de Interior",
     "subcategory": "Begonias",
-    "id": 29
+    "id": "29"
   },
   {
     "name": "Begonia Maculata",
@@ -327,6 +327,6 @@
     "description": "Planta herbaces de tallos erectos de hasta 1 m. El follaje es verde con manchas de color blanco plateado arriba, rojo abajo y tiene una base en forma de corazón, una textura ondulada y un margen ondulado.",
     "category": "Plantas de Interior",
     "subcategory": "Begonias",
-    "id": 30
+    "id": "30"
   }
 ]

@@ -2,12 +2,10 @@ import React, { useContext, useEffect, useRef } from 'react';
 import ProductAddForm from '../components/ProductAddForm';
 import ProductEditForm from '../components/ProductEditForm';
 import { useNavigate } from 'react-router-dom';
-import { CartContext } from '../context/CartContext';
 import {AdminContext} from '../context/AdminContext';
 import { Modal } from 'bootstrap';
 
 const Admin = () => {
-    const { setIsAuth } = useContext(CartContext);
 
     const navigate = useNavigate();
 
@@ -65,6 +63,15 @@ const Admin = () => {
         };
     }, [open, openEditor, setOpen, setOpenEditor, setSelected]);
 
+    const getPrice = (price) => {
+        return price.toLocaleString('es-ES', {
+            style: 'decimal',
+            useGrouping: true,
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+    }
+
     return (
         <div id='main-content-wrapper'>
             {load ? (
@@ -73,7 +80,7 @@ const Admin = () => {
                 <div className='container-fluid'><br />
                     <h1 className="title" style={{ color: '#344E41' }} >Panel Administrativo</h1>
                     <br />
-                    <button className="btn btn-primary mb-3 btnSession p-2" onClick={() => setOpen(true)}>
+                    <button className="btn mb-3 btnSession p-2" onClick={() => setOpen(true)}>
                         Agregar Producto
                     </button>
                     <ul className="list">
@@ -85,14 +92,14 @@ const Admin = () => {
                                     className="listItemImage"
                                 />
                                 <span>{product.name}</span>
-                                <span>${product.price}</span>
+                                <span>${getPrice(product.price)}</span>
                                 <div>
-                                    <button className="btn btn-secondary btnSession" onClick={() => {
+                                    <button className="btn btnSession" onClick={() => {
                                         setOpenEditor(true)
                                         setSelected(product)
                                     }}>Editar</button>
 
-                                    <button className="btn btn-danger m-2 btn-seem" onClick={() => deleteProduct(product.id)} >Eliminar</button>
+                                    <button className="btn m-2 btn-seem" onClick={() => deleteProduct(product.id)} >Eliminar</button>
                                 </div>
                             </li>
                         ))}

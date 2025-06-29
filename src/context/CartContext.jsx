@@ -9,7 +9,6 @@ export const CartProvider = ({ children }) => {
     const [products, setProducts] = useState([])
     const [load, setLoad] = useState(true)
     const [error, setError] = useState(false)
-    const [isAuthenticated, setIsAuth] = useState(false)
     const [search, setSearch] = useState("")
 
     const [isCartOpen, setCartOpen] = useState(false);
@@ -79,7 +78,7 @@ export const CartProvider = ({ children }) => {
     return (
         <CartContext.Provider value={
             {
-                cartItems, products, load, error, addToCart, deleteProduct, emptyCart, isAuthenticated, isCartOpen, setCartOpen, setIsAuth,
+                cartItems, products, load, error, addToCart, deleteProduct, emptyCart, isCartOpen, setCartOpen,
                 productsFiltered, search, setSearch, buy
             }
         } >

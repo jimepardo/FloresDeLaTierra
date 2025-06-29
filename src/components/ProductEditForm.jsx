@@ -9,22 +9,52 @@ function ProductEditForm({ selectedProduct, onEdit }) {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setProduct({...product, [name]:value });
+        if (name === 'category' && value !== product.category) {
+            product.subcategory = '';
+        }
+        if (name === 'price') {
+            setProduct({ ...product, [name]: parseFloat(value) }); 
+        } else if (name === 'stock') {
+            setProduct({ ...product, [name]: parseInt(value, 10) }); 
+        }
+        setProduct({ ...product, [name]: value });
     };
 
+    const categoriesData = [
+        {
+            name: "Plantas de Exterior",
+            subcategories: ["Media Sombra", "Pleno Sol"]
+        },
+        {
+            name: "Plantas de Interior",
+            subcategories: ["Con Flor", "Helechos", "Palmeras", "Begonias"]
+        }
+    ];
+
+    const selectedCategory = categoriesData.find(cat => cat.name === product.category);
+    const subcategoriesForSelectedCategory = selectedCategory ? selectedCategory.subcategories : [];
+
     return (
-        <form onSubmit={(e)=>{
+        <form onSubmit={(e) => {
             e.preventDefault()
             onEdit(product)
-        }}>
+        }}
+            style={{
+                marginLeft: '60px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+                maxWidth: '400px',
+                margin: 'auto',
+            }}
+        >
             <div>
                 <label>ID:</label>
                 <input className='form-control'
                     type="number"
                     name="id"
                     value={product.id || ''}
-                    onChange={handleChange}
-                    readOnly
+                    disabled
                 />
             </div>
             <div>
@@ -37,6 +67,43 @@ function ProductEditForm({ selectedProduct, onEdit }) {
                     required
                 />
             </div>
+            <div>
+                <label>Categoría: </label>
+                <select
+                    className="form-select"
+                    name="category"
+                    value={product.category || ''}
+                    onChange={handleChange}
+                    aria-label="Seleccione una categoría"
+                    required>
+                    <option value="">Seleccione una categoría</option>
+                    {categoriesData.map((cat) => (
+                        <option key={cat.name} value={cat.name}>
+                            {cat.name}
+                        </option>
+                    ))}
+                </select>
+            </div>
+            {product.category && (
+                <div>
+                    <label>Subcategoría: </label>
+                    <select
+                        className="form-select"
+                        name="subcategory"
+                        value={product.subcategory || ''}
+                        onChange={handleChange}
+                        aria-label="Seleccione una subcategoría"
+                        required
+                    >
+                        <option value="">Seleccione una subcategoría</option>
+                        {subcategoriesForSelectedCategory.map((subcat) => (
+                            <option key={subcat} value={subcat}>
+                                {subcat}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+            )}        
             <div>
                 <label>Precio:</label>
                 <input className='form-control'
@@ -59,6 +126,25 @@ function ProductEditForm({ selectedProduct, onEdit }) {
                 />
             </div>
             <div>
+                <label>Cantidad:</label>
+                <input className='form-control'
+                    type="number"
+                    name="quantity"
+                    value={product.quantity || '0'}
+                    disabled
+                />
+            </div>
+            <div>
+                <label>Descripción:</label>
+                <textarea className='form-control'
+                    type="text"
+                    name="description"
+                    value={product.description || ''}
+                    onChange={handleChange}
+                    required
+                />
+            </div>
+            <div>
                 <label>Imagen URL:</label>
                 <textarea className='form-control'
                     type="text"
@@ -67,7 +153,7 @@ function ProductEditForm({ selectedProduct, onEdit }) {
                     onChange={handleChange}
                     required
                 />
-            </div><br/>
+            </div><br />
             <button className='btn btnSession' type="submit">Actualizar Producto</button>
         </form>
     );

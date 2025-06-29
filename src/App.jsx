@@ -13,36 +13,35 @@ import ProductDetail from './pages/ProductDetail';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
 import ProtectedRoutes from './auth/ProtectedRoutes';
-import { CartContext } from './context/CartContext';
 import { useAuth } from './context/AuthContext';
 import ProductListByCategory from './pages/ProductListByCategory';
 
 
 function App() {
 
-  const { isAuthenticated } = useContext(CartContext);
-  const { role } = useAuth;
+  const { userInfo, isLoggedIn } = useAuth();
+  const role = userInfo?.role;
 
   return (
     <>
 
       <Header />
       <Routes>
-        <Route path='/' element={<ProtectedRoutes isAuthenticated={isAuthenticated} requiredRole='client' role={role} >
+        <Route path='/' element={<ProtectedRoutes isAuthenticated={isLoggedIn} requiredRole='client' role={role} >
           <Home />
         </ProtectedRoutes>} />
 
         <Route path='/login' element={<Login />} />
 
-        <Route path='/admin' element={<ProtectedRoutes isAuthenticated={isAuthenticated} requiredRole='admin'>
+        <Route path='/admin' element={<ProtectedRoutes isAuthenticated={isLoggedIn} requiredRole='admin' role={role}>
           <Admin />
         </ProtectedRoutes>} />
 
-        <Route path='/products/:id' element={<ProductDetail />} />
+        <Route path='/products/:category/:subcategory' element={<ProductListByCategory />} />
+        
+        <Route exact path="/products/:category" element={<ProductListByCategory />} />
 
-        <Route path="/products/:category/:subcategory" element={<ProductListByCategory />} />
-
-        <Route path="/products/:category" element={<ProductListByCategory />} />
+        <Route path='/product/:id' element={<ProductDetail />} />
 
         <Route path='/products' element={<Gallery />} />
 
