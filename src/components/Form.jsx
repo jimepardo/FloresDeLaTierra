@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
 function Form() {
 
@@ -15,7 +16,11 @@ function Form() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        alert(`Formulario enviado por: ${request.email}`);
+        Swal.fire({
+                title: "Formulario enviado",
+                text: "En breve se pondrán en contacto con el mail que proporcionaste: " + `${request.email}`,
+                icon: "success"
+            });
 
     }
 

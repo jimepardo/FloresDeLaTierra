@@ -1,44 +1,60 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Product from "./Product";
 import { CartContext } from "../context/CartContext";
+import Search from "./Search";
+import Pagination from "./Pagination";
 
-const ProductList = () => {
+const ProductList = ({ category, subcategory }) => {
 
-    const { products, productsFiltered, search, setSearch } = useContext(CartContext);
+    const { products, load, productsFiltered, search, setSearch } = useContext(CartContext);
+
+    const [filteredProducts, setFilteredProducts] = useState([]);
+
+    useEffect(() => {
+
+        if (!products || products.length === 0) {
+            setFilteredProducts([]);
+            return;
+        }
+
+        let productsToFilter = products;
+        if (category) {
+            const categoryFromUrl = category.replace(/-/g, ' ');
+            productsToFilter = productsToFilter.filter(p => p.category.toLowerCase() === categoryFromUrl.toLowerCase());
+        }
+        if (subcategory) {
+            const subcategoryFromUrl = subcategory.replace(/-/g, ' ');
+            productsToFilter = productsToFilter.filter(p => p.subcategory.toLowerCase() === subcategoryFromUrl.toLowerCase());
+        }
+        if (search) {
+            productsToFilter = productsToFilter.filter(p => p.name.toLowerCase().includes(search.toLowerCase()));
+        }
+        setFilteredProducts(productsToFilter);
+        setCurrentPage(1);
+    }, [category, subcategory, search, products]);
+
 
     const [currentPage, setCurrentPage] = useState(1);
-    const productsPerPage = 10;
+    const productsPerPage = 8;
 
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = productsFiltered.slice(indexOfFirstProduct, indexOfLastProduct);
+    const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
-    const totalPages = Math.ceil(productsFiltered.length / productsPerPage);
+    const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-    const pageNumbers = [];
-    for (let i = 1; i <= totalPages; i++){
-        pageNumbers.push(i);
-    } 
+
+    const handleSearchChange = (e) => {
+        setSearch(e.target.value);
+    }
 
     return (
         <>
-            <br />
-            <div className="row justify-content-end mb-4"> 
-                <div className="col-12 col-md-4 col-lg-3">
-                    <form role="search">
-                        <input
-                            className="form-control" 
-                            type="search"
-                            placeholder="Buscar productos ..."
-                            value={search}
-                            onChange={(e) => setSearch(e.target.value)}
-                        />
-                    </form>
-                </div>
-            </div>
-            <br />
+
+            <Search search={search} handleSearchChange={handleSearchChange} />
+
             <div className="row justify-content-center g-4" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly' }} >
                 {
                     currentProducts.length > 0 ? (
@@ -46,36 +62,14 @@ const ProductList = () => {
                             <Product key={product.id} product={product} />
                         ))
                     ) : (
-                        <p style={{ textAlign: 'center', color: '#344E41' }}>No se encontraron productos.</p>
+                        <p style={{ textAlign: 'center', color: '#344E41' }}>
+                            {load ? 'Cargando productos...' : 'No se encontraron productos para esta selección.'}
+                        </p>
                     )
                 }
             </div>
-            {totalPages > 1 && ( 
-                <nav aria-label="Paginación de productos" className="mt-4" style={{background:'transparent'}}>
-                    <ul className="pagination justify-content-center">
-
-                        <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}` }>
-                            <button className="page-link" onClick={() => paginate(currentPage - 1)} aria-label="Anterior">
-                                <span aria-hidden="true">&laquo;</span>
-                            </button>
-                        </li>
-
-                        {pageNumbers.map(number => (
-                            <li key={number} className={`page-item ${currentPage === number ? 'active' : ''}`}>
-                                <button onClick={() => paginate(number)} className="page-link">
-                                    {number}
-                                </button>
-                            </li>
-                        ))}
-
-                        <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
-                            <button className="page-link" onClick={() => paginate(currentPage + 1)} aria-label="Siguiente">
-                                <span aria-hidden="true">&raquo;</span>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-            )}
+            <Pagination
+                currentPage={currentPage} totalPages={totalPages} paginate={paginate} />
         </>
     )
 };

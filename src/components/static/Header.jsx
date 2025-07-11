@@ -70,7 +70,7 @@ function Header() {
 
     return (
         <header>
-            <nav className="navbar navbar-expand-lg fixed-top">
+            <nav className="navbar navbar-expand-lg fixed-top" >
                 <div className="container-fluid" >
                     <NavLink className='navbar-brand' to="/">
                         <img className="imgLogo " src={logo} />
@@ -85,13 +85,13 @@ function Header() {
                     </button>
 
                     <div className="navbar-collapse collapse" id="navbarCollapse">
-                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0" data-component="menu">
                             {(!isLoggedIn || (isLoggedIn && userInfo?.role === "client")) && (
                                 <>
-                                    <li className="nav-item">
+                                    <li className="nav-item" data-component="menu.item">
                                         <NavLink className='link nav-link' to="/" onClick={handleNavLinkClick}> INICIO </NavLink>
                                     </li>
-                                    <li className="nav-item dropdown d-none d-lg-block">
+                                    <li className="nav-item dropdown d-none d-lg-block" data-component="menu.item">
                                         <NavLink
                                             className={({ isActive }) =>
                                                 `link nav-link dropdown-toggle ${isActive || window.location.pathname.startsWith('/products') ? 'active' : ''}`
@@ -103,7 +103,7 @@ function Header() {
                                             aria-expanded="false"
                                              >PRODUCTOS </NavLink>
                                         <ul className="dropdown-menu" aria-labelledby="productsDropdown">
-                                            <li className="nav-item dropdown dropend">
+                                            <li className="nav-item dropdown dropend" data-component="menu.item">
                                                 <a
                                                     className="dropdown-item dropdown-toggle"
                                                     href="#"
@@ -113,13 +113,13 @@ function Header() {
                                                     aria-expanded="false"
                                                     >Plantas de Exterior</a>
                                                 <ul className="dropdown-menu" aria-labelledby="exteriorDropdown">
-                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-exterior/media-sombra"  >Media Sombra</NavLink> </li>
-                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-exterior/pleno-sol" >Pleno Sol</NavLink> </li>
+                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-exterior/media-sombra" data-component="menu.item" >Media Sombra</NavLink> </li>
+                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-exterior/pleno-sol" data-component="menu.item">Pleno Sol</NavLink> </li>
                                                     <li><hr className="dropdown-divider" /></li>
-                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-exterior" >Ver todas Plantas de Exterior</NavLink> </li>
+                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-exterior" data-component="menu.item">Ver todas Plantas de Exterior</NavLink> </li>
                                                 </ul>
                                             </li>
-                                            <li className="nav-item dropdown dropend">
+                                            <li className="nav-item dropdown dropend" data-component="menu.item">
                                                 <a
                                                     className='dropdown-item dropdown-toggle'
                                                     href="#"
@@ -129,16 +129,16 @@ function Header() {
                                                     aria-expanded="false"
                                                     >Plantas de Interior</a>
                                                 <ul className="dropdown-menu" aria-labelledby="interiorDropdown">
-                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/con-flor" >Con Flor</NavLink> </li>
-                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/helechos" >Helechos</NavLink> </li>
-                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/palmeras" >Palmeras</NavLink> </li>
-                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/begonias" >Begonias</NavLink> </li>
+                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/con-flor" data-component="menu.item">Con Flor</NavLink> </li>
+                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/helechos" data-component="menu.item">Helechos</NavLink> </li>
+                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/palmeras" data-component="menu.item">Palmeras</NavLink> </li>
+                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior/begonias" data-component="menu.item">Begonias</NavLink> </li>
                                                     <li><hr className="dropdown-divider" /></li>
-                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior" >Ver todas Plantas de Interior</NavLink> </li>
+                                                    <li><NavLink className='link dropdown-item' to="/products/plantas-de-interior" data-component="menu.item">Ver todas Plantas de Interior</NavLink> </li>
                                                 </ul>
                                             </li>
                                             <li><hr className="dropdown-divider" /></li>
-                                            <li><NavLink className="dropdown-item" to="/products" end>Todos los productos</NavLink></li>
+                                            <li><NavLink className="dropdown-item" to="/products" data-component="menu.item" end>Todos los productos</NavLink></li>
                                         </ul>
                                     </li>
 

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import './styles/Product.css';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
@@ -10,14 +10,15 @@ const Product = ({ product }) => {
 
     const [quantity, setQuantity] = useState(product.quantity);
 
-    const increase = () => {
-        if (quantity + product.quantity <= product.stock) {
+    const increase = useCallback(() => {
+        if (product && quantity < product.stock) {
             setQuantity(prev => prev + 1);
         }
-    };
-    const decrease = () => {
+    }, [quantity, product]);
+
+    const decrease = useCallback(() => {
         setQuantity(prev => (prev > 1 ? prev - 1 : prev));
-    }
+    }, [quantity]);
 
     const getPrice = (price) => {
         return price.toLocaleString('es-ES', {
@@ -27,7 +28,7 @@ const Product = ({ product }) => {
             maximumFractionDigits: 2
         });
     }
-    
+
     return (
         <div className='col'>
             <section className='card'>
@@ -37,15 +38,21 @@ const Product = ({ product }) => {
                 <h3 className='card-title'>{product.name}</h3>
                 <p className='product-price'>${getPrice(product.price)}</p>
                 <p className='product-stock'>Stock: {product.stock} </p>
-                <div className='quantity-container'>
-                    <button onClick={decrease} className='qtyButton'><HiMinusSm /></button>
-                    <span>{quantity}</span>
-                    <button onClick={increase} className='qtyButton'><HiPlusSm /></button>
-                </div>
-                <div className='d-inline-flex gap-1'>
-                    <button className='btn btn-add' style={{ display: quantity == 0 ? 'none' : 'block' }} onClick={() => addToCart({ ...product, quantity: quantity })} >Agregar</button>
-                    <Link role='button' className='btn btn-seem' to={`/product/${product.id}`}> Ver más</Link>
-                </div>
+                {product.stock > 0 ? (
+                    <>
+                        <div className='quantity-container'>
+                            <button onClick={decrease} className='qtyButton' disabled={quantity === 1}><HiMinusSm /></button>
+                            <span>{quantity}</span>
+                            <button onClick={increase} className='qtyButton' disabled={quantity >= product.stock}><HiPlusSm /></button>
+                        </div>
+                        <div className='d-inline-flex gap-1'>
+                            <button className='btn btn-add' style={{ display: quantity == 0 ? 'none' : 'block' }} onClick={() => addToCart({ ...product, quantity: quantity })} >Agregar</button>
+                            <Link role='button' className='btn btn-seem' to={`/product/${product.id}`}> Ver más</Link>
+                        </div>
+                    </>
+                ) : (
+                    <p style={{ color: 'red', fontWeight: 'bold' }}>Sin stock disponible</p>
+                )}
             </section>
         </div>
 

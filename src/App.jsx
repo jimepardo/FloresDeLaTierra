@@ -16,7 +16,6 @@ import ProtectedRoutes from './auth/ProtectedRoutes';
 import { useAuth } from './context/AuthContext';
 import ProductListByCategory from './pages/ProductListByCategory';
 
-
 function App() {
 
   const { userInfo, isLoggedIn } = useAuth();

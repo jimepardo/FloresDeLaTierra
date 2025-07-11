@@ -1,0 +1,51 @@
+/* In navbar.css or a new filters.css */
+
+.sidebar {
+    background-color: var(--beige); /* Example background color */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px; /* Space from the top */
+}
+
+.sidebar h5,
+.sidebar h6 {
+    color: var(--v-oscuro);
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
+}
+
+.sidebar .link {
+    color: var(--v-oscuro);
+    text-decoration: none;
+    display: block; /* Make the whole area clickable */
+    padding: 5px 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar .link:hover {
+    color: var(--v-medio);
+    transform: translateX(3px); /* Subtle hover effect */
+}
+
+.sidebar .link.active-filter {
+    font-weight: bold;
+    color: var(--v-medio); /* Highlight active filter */
+}
+
+/* Optional: For mobile, you might want a collapsible filter */
+/* This would involve more React state and Bootstrap Collapse component,
+   similar to how your Header handles mobile navigation. */
+@media (max-width: 767.98px) {
+    .sidebar {
+        margin-top: 0; /* Remove top margin on small screens */
+        border-radius: 0; /* Remove border radius on small screens */
+    }
+}
