@@ -1,9 +1,10 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import ProductAddForm from '../components/ProductAddForm';
 import ProductEditForm from '../components/ProductEditForm';
 import { useNavigate } from 'react-router-dom';
-import {AdminContext} from '../context/AdminContext';
+import { AdminContext } from '../context/AdminContext';
 import { Modal } from 'bootstrap';
+import Pagination from '../components/Pagination';
 
 const Admin = () => {
 
@@ -72,19 +73,30 @@ const Admin = () => {
         });
     }
 
+    const [currentPage, setCurrentPage] = useState(1);
+    const productsPerPage = 20;
+
+    const indexOfLastProduct = currentPage * productsPerPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+
+    const totalPages = Math.ceil(products.length / productsPerPage);
+
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
     return (
         <div id='main-content-wrapper'>
             {load ? (
                 <p>Cargando...</p>
             ) : (
-                <div className='container-fluid'><br />
+                <div className='container-fluid justify-content-center'><br />
                     <h1 className="title" style={{ color: '#344E41' }} >Panel Administrativo</h1>
                     <br />
                     <button className="btn mb-3 btnSession p-2" onClick={() => setOpen(true)}>
                         Agregar Producto
                     </button>
                     <ul className="list">
-                        {products.map((product) => (
+                        {currentProducts.map((product) => (
                             <li key={product.id} className="listItem">
                                 <img
                                     src={product.img}
@@ -106,6 +118,8 @@ const Admin = () => {
                     </ul>
                 </div>
             )}
+            <Pagination
+                currentPage={currentPage} totalPages={totalPages} paginate={paginate} />
 
             <div className="modal fade" id="addProductModal" tabIndex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true" ref={addModalRef}>
                 <div className="modal-dialog">
@@ -134,7 +148,7 @@ const Admin = () => {
                         </div>
                         <div className="modal-body">
 
-                            {selected && ( 
+                            {selected && (
                                 <ProductEditForm
                                     selectedProduct={selected}
                                     onEdit={(updatedProduct) => {
@@ -145,9 +159,7 @@ const Admin = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     );
 };

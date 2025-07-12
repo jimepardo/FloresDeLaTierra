@@ -44,14 +44,14 @@
     flex-wrap: wrap;
 }
 
-.list img  {
+.list img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
 }
 
 .listItem {
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,7 +61,7 @@
 }
 
 .listItem span {
-    
+
     font-size: 18px;
     margin-bottom: 5px;
 }
@@ -85,10 +85,10 @@
 
 .loading {
     display: flex;
-    justify-content: center; 
-    align-items: center;    
-    min-height: 50vh;       
-    width: 100%;            
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    width: 100%;
 }
 
 .loading img {
@@ -105,44 +105,91 @@
 .breadcrumb {
     padding: 0.75rem 1rem;
     margin-bottom: 1rem;
-    list-style: none; 
-    background: linear-gradient(1deg, #A3B18A, #DAD7CD);; 
-    border-radius: 0.3rem; 
-    display: flex; 
-    flex-wrap: wrap; 
-    align-items: center; 
-    font-size: 0.95rem; 
+    list-style: none;
+    background: linear-gradient(1deg, #A3B18A, #DAD7CD);
+    ;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.95rem;
 }
 
 .breadcrumb-item {
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
-    content: ">"; 
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-    color: #6B8B5B; 
+    color: #6B8B5B;
 }
 
 .breadcrumb-item a {
     color: var(--v-oscuro);
-    text-decoration: none; 
-    transition: color 0.2s ease-in-out; 
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
 }
 
 .breadcrumb-item a:hover {
-    color: #588157; 
+    color: #588157;
     text-decoration: underline;
 }
 
 .breadcrumb-item.active {
-    color: #728175; 
-    font-weight: 500; 
-    pointer-events: none; 
+    color: #728175;
+    font-weight: 500;
+    pointer-events: none;
 }
 
 .breadcrumb ol {
-    margin-bottom: 0; 
+    margin-bottom: 0;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    color: var(--v-oscuro);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.icon-link:hover {
+    color: var(--v-medio);
+}
+
+.icon-link svg {
+    margin-left: 0.5rem;
+    color: var(--v-oscuro);
+}
+
+.icon-link svg {
+    transition: color 0.2s ease-in-out;
+}
+
+.icon-link svg:hover {
+    color: var(--v-medio);
+}
+
+.icon-link:active {
+    color: var(--v-intermedio);
+}
+
+.icon-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--v-claro);
+}
+
+.main-title {
+    background: linear-gradient(1deg, #A3B18A, #DAD7CD);
+    border-radius: 0.3rem;
+    max-width: 100%;
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+    margin-left: 10px;
 }

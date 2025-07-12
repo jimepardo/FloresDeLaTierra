@@ -6,7 +6,7 @@ import Pagination from "./Pagination";
 
 const ProductList = ({ category, subcategory }) => {
 
-    const { products, load, productsFiltered, search, setSearch } = useContext(CartContext);
+    const { products, load, search, setSearch } = useContext(CartContext);
 
     const [filteredProducts, setFilteredProducts] = useState([]);
 
